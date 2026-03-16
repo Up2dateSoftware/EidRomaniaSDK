@@ -1,0 +1,85 @@
+# Xcode
+.DS_Store
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+DerivedData/
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace/xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# Swift Package Manager
+.swiftpm/
+.build/
+Package.resolved
+
+# CocoaPods
+Pods/
+*.xcworkspace
+!default.xcworkspace
+
+# Android
+*.iml
+.gradle
+/local.properties
+/.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+
+# React Native
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Backup files - CRITICAL: Never commit source code backups
+*.backup
+*.swift.backup
+*.m.backup
+*.mm.backup
+*.h.backup
+*.kt.backup
+*.java.backup
+
+# Keystores and certificates
+*.keystore
+*.jks
+*.p12
+*.pem
+!*.xcframework/**/*.pem
+
+# Credentials
+local.properties
+gradle.properties.local
+*.local
+
+# Temporary files
+*.tmp
+*.temp

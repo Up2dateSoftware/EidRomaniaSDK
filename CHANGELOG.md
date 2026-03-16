@@ -1,0 +1,207 @@
+# Changelog
+
+All notable changes to the Romanian eID SDK will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [1.4.0] - 2025-11-13
+
+### iOS SDK
+
+#### Added
+- **MRZ Scanner** - Camera-based Machine Readable Zone scanning for passports
+  - Real-time Vision OCR with text recognition
+  - Automatic MRZ format detection (TD3 - two lines × 44 characters)
+  - OCR error correction for common character confusions (O/0, I/1, etc.)
+  - Visual feedback with target rectangle overlay
+  - Public API: `EIDReader.shared.startMRZScanning(from:delegate:)`
+  - New model: `MRZScanResult` with JSON serialization support
+  - Thread-safe implementation with Main Actor isolation
+
+#### Improved
+- **Performance Optimization** - Removed all debug logging (226 statements)
+  - Eliminated `Logger` statements from NFC reading operations
+  - Removed `print` statements from OCR service
+  - Removed debug logging from PACE/BAC handlers
+  - Silent operation in production builds for better performance
+  - Reduced memory footprint during NFC sessions
+
+- **Documentation** - Complete SDK documentation overhaul
+  - Comprehensive README with API examples
+  - Step-by-step integration guide
+  - Complete changelog with detailed version history
+  - License documentation with tier information
+  - Swift Package Manager support with binary distribution
+
+#### Fixed
+- MRZ parsing edge cases for special characters
+- Memory leaks in NFC session management
+- Thread safety issues in OCR scanning
+
+### React Native SDK
+
+#### Added
+- TypeScript definitions for all APIs
+- Complete React Native bridge for iOS
+- Event listeners for progress updates
+- Error code constants for error handling
+
+#### In Progress
+- 🚧 Android native implementation (see ANDROID_TODO.md)
+
+### Repository Structure
+
+#### Added
+- Multi-platform repository structure
+  - `ios/` - iOS native SDK with Swift Package Manager
+  - `android/` - Android native SDK (coming soon)
+  - `react-native/` - React Native bridge
+  - `docs/` - Cross-platform documentation
+  - `examples/` - Platform-specific examples
+
+## [1.3.0] - 2025-10-15
+
+### iOS SDK
+
+#### Added
+- OCR scanning for old non-NFC ID cards
+- Multi-pass OCR with confidence scoring
+- Visual feedback during OCR capture
+- CNP validation and checksum verification
+
+#### Improved
+- CSCA validation performance
+- NFC reading stability
+- Error messages and handling
+
+## [1.2.0] - 2025-09-01
+
+### iOS SDK
+
+#### Added
+- CSCA certificate validation for document authenticity
+- Support for Romanian CSCA certificates
+- Configurable validation options
+- Validation status in result models
+
+#### Improved
+- PACE authentication reliability
+- Photo extraction quality
+- Memory management during NFC sessions
+
+## [1.1.0] - 2025-07-15
+
+### iOS SDK
+
+#### Added
+- Passport reading with BAC authentication
+- DG11 parsing for extended passport data (CNP, place of birth, residence)
+- Signature extraction from passports
+- Phone number extraction from Romanian ePassports
+
+#### Improved
+- ID card reading speed
+- Error handling and user feedback
+- Documentation and code examples
+
+#### Fixed
+- Issue with long NFC sessions timing out
+- Photo extraction for certain card types
+
+## [1.0.0] - 2025-06-01
+
+### iOS SDK
+
+#### Added
+- Initial release of Romanian eID SDK for iOS
+- NFC reading for Romanian electronic ID cards
+- PACE authentication with CAN
+- Personal data extraction (CNP, name, addresses, dates)
+- Facial photo extraction from chip
+- JWT-based license system
+- SwiftUI example application
+- Comprehensive error handling
+
+### Features
+- Full PACE protocol support
+- ISO7816 tag communication
+- AES/3DES encryption
+- Secure messaging
+- Thread-safe NFC operations
+
+---
+
+## Version Support Matrix
+
+| SDK Version | iOS | Android | React Native | Swift | Kotlin |
+|-------------|-----|---------|--------------|-------|--------|
+| 1.4.0 | 17.6+ | - | 0.70+ (iOS only) | 5.9+ | - |
+| 1.3.0 | 17.0+ | - | - | 5.9+ | - |
+| 1.2.0 | 16.0+ | - | - | 5.8+ | - |
+| 1.1.0 | 16.0+ | - | - | 5.8+ | - |
+| 1.0.0 | 15.0+ | - | - | 5.7+ | - |
+
+---
+
+## Upcoming Features
+
+### Q1 2026
+- [ ] Android native SDK release
+- [ ] React Native Android support completion
+- [ ] CocoaPods distribution for iOS
+- [ ] Maven Central distribution for Android
+
+### Q2 2026
+- [ ] Flutter plugin
+- [ ] Web SDK with WebNFC API
+- [ ] Advanced document security verification
+- [ ] Liveness detection
+
+### Future
+- [ ] Support for other EU country documents
+- [ ] Document expiry notifications
+- [ ] Batch document processing
+- [ ] Cloud-based license management portal
+
+---
+
+## Migration Guides
+
+### Migrating from 1.3.0 to 1.4.0
+
+**New MRZ Scanner API:**
+
+```swift
+// Old: Manual MRZ entry
+let passport = try await EIDReader.shared.readPassport(
+    mrzKey: manuallyEnteredMRZ,
+    options: options
+)
+
+// New: MRZ Scanner
+let mrzResult = try await EIDReader.shared.startMRZScanning(from: self)
+let passport = try await EIDReader.shared.readPassport(
+    mrzKey: mrzResult.mrzKey,
+    options: options
+)
+```
+
+**No Breaking Changes** - Version 1.4.0 is fully backward compatible with 1.3.0.
+
+---
+
+## License
+
+See [LICENSE.md](LICENSE.md) for license information.
+
+## Support
+
+For questions, issues, or feature requests:
+- 📧 Email: support@up2date.ro
+- 🐛 Issues: [GitHub Issues](https://github.com/Up2dateSoftware/EidRomaniaSDK/issues)
+- 📖 Docs: [Documentation](https://docs.up2date.ro/eid-sdk)
+
+---
+
+© 2025 Up2Date Software. All rights reserved.
