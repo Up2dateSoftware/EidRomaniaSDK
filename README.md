@@ -94,7 +94,7 @@ https://github.com/Up2dateSoftware/EidRomaniaSDK.git
 Or add to your `Package.swift`:
 ```swift
 dependencies: [
-    .package(url: "https://github.com/Up2dateSoftware/EidRomaniaSDK.git", from: "1.4.17")
+    .package(url: "https://github.com/Up2dateSoftware/EidRomaniaSDK.git", exact: "1.4.17")
 ]
 ```
 
