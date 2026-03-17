@@ -5,6 +5,7 @@ Professional SDK for reading Romanian electronic identity documents (ePassports 
 [![License](https://img.shields.io/badge/license-Commercial-blue.svg)](LICENSE.md)
 [![iOS](https://img.shields.io/badge/iOS-14.0%2B-blue.svg)](https://developer.apple.com/ios/)
 [![React Native](https://img.shields.io/badge/React%20Native-0.76%2B-blue.svg)](https://reactnative.dev/)
+[![Flutter](https://img.shields.io/badge/Flutter-3.10%2B-blue.svg)](https://flutter.dev/)
 
 ## 🌟 Features
 
@@ -33,12 +34,37 @@ EidRomaniaSDK/
 │   ├── src/                      # TypeScript source
 │   ├── example/                  # Complete React Native demo app
 │   └── README.md                 # React Native documentation
+├── flutter/                      # Flutter plugin (iOS + Android)
+│   ├── ios/                      # iOS native plugin
+│   ├── android/                  # Android native plugin
+│   ├── lib/                      # Dart source
+│   ├── example/                  # Complete Flutter demo app
+│   └── README.md                 # Flutter documentation
 ├── Package.swift                 # Swift Package Manager manifest
 ├── RomanianEIDSDK.podspec        # CocoaPods spec for iOS
 └── README.md                     # This file
 ```
 
 ## 🚀 Quick Start
+
+### Flutter Integration
+
+```bash
+# Add to your pubspec.yaml
+dependencies:
+  romanian_eid_sdk:
+    git:
+      url: https://github.com/Up2dateSoftware/EidRomaniaSDK.git
+      path: flutter
+
+# Or clone and try the example app
+git clone https://github.com/Up2dateSoftware/EidRomaniaSDK.git
+cd EidRomaniaSDK/flutter/example
+flutter pub get
+flutter run
+```
+
+**Complete guide**: See [flutter/README.md](flutter/README.md)
 
 ### React Native Integration
 
@@ -101,13 +127,17 @@ pod install
 | **iOS (Native)** | 14.0+ | ✅ iPhone 7+ | ✅ Production Ready |
 | **React Native (iOS)** | iOS 14.0+ | ✅ iPhone 7+ | ✅ Production Ready |
 | **React Native (Android)** | API 28+ | ✅ | ✅ Production Ready |
+| **Flutter (iOS)** | iOS 13.0+ | ✅ iPhone 7+ | 🚧 Beta |
+| **Flutter (Android)** | API 24+ | ✅ | 🚧 Beta |
 
 ## 📖 Documentation
 
 ### Integration Guides
+- **[Flutter README](flutter/README.md)** - Complete Flutter integration guide
 - **[React Native README](react-native/README.md)** - Complete React Native integration guide
 - **[iOS README](ios/README.md)** - Native iOS integration guide
 - **[iOS Integration Guide](ios/Documentation/INTEGRATION_GUIDE.md)** - Detailed iOS setup
+- **[Flutter Example](flutter/example/)** - Flutter demo application
 - **[React Native Example](react-native/example/)** - Working demo application
 - **[iOS Demo App](ios/DemoApp/)** - Native iOS example
 
@@ -188,6 +218,38 @@ And add NFC capability with these identifiers in entitlements:
 ```
 
 ## 🎯 Usage Examples
+
+### Flutter (Dart)
+
+```dart
+import 'package:romanian_eid_sdk/romanian_eid_sdk.dart';
+
+final sdk = RomanianEidSdk();
+
+// Initialize SDK with your license
+await sdk.initialize('YOUR_LICENSE_JWT_HERE');
+
+// Listen to reading progress
+sdk.progressStream.listen((progress) {
+  print('${progress.step}: ${progress.message}');
+});
+
+// Read passport via NFC
+final passportData = await sdk.readPassport(
+  documentNumber: '123456789',
+  dateOfBirth: '901231',    // YYMMDD format
+  dateOfExpiry: '301231',   // YYMMDD format
+);
+
+print('Name: ${passportData.firstName} ${passportData.lastName}');
+print('Nationality: ${passportData.nationality}');
+
+// Read ID card via NFC (requires CAN)
+final idCardData = await sdk.readIDCard(can: '123456');
+
+print('CNP: ${idCardData.cnp}');
+print('Address: ${idCardData.address}');
+```
 
 ### React Native
 
@@ -380,9 +442,11 @@ React • Next.js • Laravel • FilamentPHP • Swift • Kotlin • React Nat
 
 ## 📚 Additional Resources
 
+- 📘 [Flutter Integration Guide](flutter/README.md)
 - 📘 [React Native Integration Guide](react-native/README.md)
 - 📗 [iOS Integration Guide](ios/README.md)
 - 📙 [Detailed iOS Setup](ios/Documentation/INTEGRATION_GUIDE.md)
+- 🎯 [Flutter Example App](flutter/example/)
 - 🎯 [React Native Example App](react-native/example/)
 - 🎯 [iOS Demo App](ios/DemoApp/)
 - 📋 [Changelog](CHANGELOG.md)

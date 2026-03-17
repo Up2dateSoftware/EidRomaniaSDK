@@ -1,0 +1,27 @@
+name: romanian_eid_sdk
+description: Flutter plugin for reading Romanian electronic identity documents (passports and ID cards) via NFC.
+version: 1.0.0
+homepage: https://bitbucket.org/up2datesoftware/eidromania-flutter
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.10.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.eidromania.flutter
+        pluginClass: RomanianEidSdkPlugin
+      ios:
+        pluginClass: RomanianEidSdkPlugin
