@@ -21,7 +21,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "RomanianEIDSDK",
-            path: "ios/RomanianEIDSDK.xcframework.zip"
+            url: "https://github.com/Up2dateSoftware/EidRomaniaSDK/releases/download/v1.4.17/RomanianEIDSDK.xcframework.zip",
+            checksum: "434015bdca0d244ae6a8b763ebbb9304ea5dbd0ca0c7642161a88c9e5477dc0c"
         )
     ]
 )
