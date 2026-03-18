@@ -1,0 +1,12 @@
+{
+  "name": "EIDTestApp",
+  "displayName": "EIDTestApp",
+  "react-native": {
+    "permissions": {
+      "ios": {
+        "NSCameraUsageDescription": "We need camera access to scan MRZ codes and OCR on identity documents",
+        "NFCReaderUsageDescription": "We need NFC access to read your Romanian eID card or ePassport"
+      }
+    }
+  }
+}

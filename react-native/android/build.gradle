@@ -1,0 +1,81 @@
+buildscript {
+  repositories {
+    google()
+    mavenCentral()
+  }
+
+  dependencies {
+    classpath 'com.android.tools.build:gradle:7.4.2'
+    classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.24'
+  }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+repositories {
+  google()
+  mavenCentral()
+
+  // GitHub Packages repository for eID Romania SDK
+  // Configure credentials in gradle.properties or as environment variables
+  maven {
+    url = uri("https://maven.pkg.github.com/Up2DateSoftware/eidromania-android-sdk")
+    credentials {
+      username = project.findProperty("gpr.user") ?: System.getenv("GPR_USER")
+      password = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
+    }
+  }
+}
+
+def safeExtGet(prop, fallback) {
+  rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+}
+
+android {
+  compileSdkVersion safeExtGet('compileSdkVersion', 36)
+
+  defaultConfig {
+    minSdkVersion safeExtGet('minSdkVersion', 28)
+    targetSdkVersion safeExtGet('targetSdkVersion', 36)
+    versionCode 1
+    versionName "1.0.0"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+    }
+  }
+
+  lintOptions {
+    disable 'GradleCompatible'
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_11
+    targetCompatibility JavaVersion.VERSION_11
+  }
+}
+
+configurations.all {
+  resolutionStrategy {
+    force 'org.jetbrains.kotlin:kotlin-stdlib:1.9.24'
+    force 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.24'
+    force 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.24'
+    force 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1'
+    force 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1'
+    force 'org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1'
+  }
+}
+
+dependencies {
+  implementation 'com.facebook.react:react-native:+'
+
+  // eID Romania SDK - Main dependency (updated to v1.5.3)
+  implementation 'com.up2date.eidromania:eidromania-sdk:1.5.3'
+
+  // Kotlin standard library (required by SDK)
+  implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.24'
+  implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1'
+}

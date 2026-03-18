@@ -1,0 +1,24 @@
+pluginManagement { includeBuild("../node_modules/@react-native/gradle-plugin") }
+plugins { id("com.facebook.react.settings") }
+extensions.configure(com.facebook.react.ReactSettingsExtension){ ex -> ex.autolinkLibrariesFromCommand() }
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        // GitHub Packages repository for eID Romania SDK
+        // Configure credentials in gradle.properties or as environment variables
+        maven {
+            url = uri("https://maven.pkg.github.com/Up2DateSoftware/eidromania-android-sdk")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("GPR_USER")
+                password = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
+            }
+        }
+    }
+}
+
+rootProject.name = 'EIDTestApp'
+include ':app'
+includeBuild('../node_modules/@react-native/gradle-plugin')
