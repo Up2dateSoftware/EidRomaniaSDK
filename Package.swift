@@ -21,7 +21,7 @@ let package = Package(
         .binaryTarget(
             name: "OpenSSL",
             url: "https://github.com/Up2dateSoftware/EidRomaniaSDK/releases/download/1.4.19/OpenSSL.xcframework.zip",
-            checksum: "56e8fde144e5a692ba0d7806d457e6f82f5b22419c7931934da5e0cb035f00ba"
+            checksum: "d7e66ab55175bfa58ebd041e65ee5b0fd23ff9987a54abd016db4ef9ee541e04"
         )
     ]
 )
