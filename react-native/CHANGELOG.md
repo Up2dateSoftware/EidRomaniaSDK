@@ -5,6 +5,23 @@ All notable changes to the Romanian eID SDK for React Native will be documented 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.21] - 2026-06-05
+
+### Fixed
+
+#### iOS
+- **Deployment target mismatch** — `RomanianEIDSDK.xcframework` was previously
+  built with `minos 17.6` while `RNRomanianEIDSDK.podspec` advertised iOS 15.0,
+  causing installs to fail or silently require iOS 17.6. The framework is now
+  rebuilt with `minos 15.0`, matching the podspec.
+- **Main-thread crashes** — Picks up the underlying SDK fixes that route
+  CoreNFC `begin()` / `alertMessage` / `invalidate(...)` and the
+  OCR / MRZ camera `present` / `dismiss` calls through the main queue,
+  preventing `NSInternalInconsistencyException: 'Call must be made on main thread'`
+  when the public async API is called from a background `Task`.
+
+No public API changes. Drop-in upgrade from 1.4.17 – 1.4.20.
+
 ## [1.4.8] - 2025-01-17
 
 ### Fixed

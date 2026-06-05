@@ -1,6 +1,6 @@
 {
   "name": "@up2date/romanian-eid-sdk",
-  "version": "1.4.17",
+  "version": "1.4.21",
   "description": "Romanian eID & Passport NFC Reader SDK for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
