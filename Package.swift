@@ -15,8 +15,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "RomanianEIDSDKBinary",
-            url: "https://github.com/Up2dateSoftware/EidRomaniaSDK/releases/download/1.4.20/RomanianEIDSDK.xcframework.zip",
-            checksum: "c45175470e211212330045c0547a0f8d1035b5a7cad31632ba294b0dd2d5ebbd"
+            url: "https://github.com/Up2dateSoftware/EidRomaniaSDK/releases/download/1.4.21/RomanianEIDSDK.xcframework.zip",
+            checksum: "ceca6e6d6d4c85420dad759d6054ab91e042db115f6553ea39c898e51fb2cb8c"
         ),
         .binaryTarget(
             name: "OpenSSL",

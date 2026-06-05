@@ -5,6 +5,26 @@ All notable changes to the Romanian eID SDK will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.21] - 2026-06-05
+
+### iOS SDK
+
+#### Fixed
+- **Main-thread crash on passport (MRZ) reading** - `NFCTagReaderSession.begin()`,
+  `alertMessage` updates and `invalidate(...)` are now always dispatched onto the
+  main queue from `PassportReader`, preventing
+  `NSInternalInconsistencyException: 'Call must be made on main thread'` when the
+  public async API is called from a background `Task`.
+- **Main-thread crash on Romanian ID card reading** - Centralized all NFC alert
+  message updates in `CompleteRomanianEIDReader` through a main-thread helper and
+  wrapped post-flow `session.alertMessage` / `session.invalidate(...)` calls in a
+  `DispatchQueue.main.async` block.
+- **Main-thread crash on OCR / MRZ camera presentation** - `UIViewController.present`
+  and `dismiss` for the OCR and MRZ camera screens are now dispatched on the main
+  queue inside `EIDReader.startOCRScanning(from:)` and `startMRZScanning(from:)`.
+
+No public API changes. Drop-in upgrade from 1.4.20.
+
 ## [1.4.0] - 2025-11-13
 
 ### iOS SDK
