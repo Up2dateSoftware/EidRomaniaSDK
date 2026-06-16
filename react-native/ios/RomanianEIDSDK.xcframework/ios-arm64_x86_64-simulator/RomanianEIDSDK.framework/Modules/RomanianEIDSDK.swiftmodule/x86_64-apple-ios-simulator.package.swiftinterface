@@ -10,6 +10,9 @@ import CoreNFC
 import CryptoKit
 import CryptoTokenKit
 import Foundation
+import Foundation/*.Bundle*/
+import Foundation/*.ProcessInfo*/
+import Foundation/*.URL*/
 import OSLog
 import OpenSSL
 import Security
@@ -979,6 +982,7 @@ public struct PassportResult : Swift.Sendable {
   public let fullName: Swift.String
   public let dateOfBirth: Swift.String
   public let nationality: Swift.String
+  public let issuingCountry: Swift.String?
   public let sex: Swift.String
   public let dateOfExpiry: Swift.String
   public let cnp: Swift.String?
@@ -991,7 +995,7 @@ public struct PassportResult : Swift.Sendable {
   public let cscaCountry: Swift.String?
   public let cscaValidationMessage: Swift.String?
   public let errorMessage: Swift.String?
-  public init(success: Swift.Bool, documentNumber: Swift.String = "", fullName: Swift.String = "", dateOfBirth: Swift.String = "", nationality: Swift.String = "", sex: Swift.String = "", dateOfExpiry: Swift.String = "", cnp: Swift.String? = nil, placeOfBirth: Swift.String? = nil, residenceAddress: Swift.String? = nil, phoneNumber: Swift.String? = nil, facialImage: UIKit.UIImage? = nil, signatureImage: UIKit.UIImage? = nil, cscaValidated: Swift.Bool = false, cscaCountry: Swift.String? = nil, cscaValidationMessage: Swift.String? = nil, errorMessage: Swift.String? = nil)
+  public init(success: Swift.Bool, documentNumber: Swift.String = "", fullName: Swift.String = "", dateOfBirth: Swift.String = "", nationality: Swift.String = "", issuingCountry: Swift.String? = nil, sex: Swift.String = "", dateOfExpiry: Swift.String = "", cnp: Swift.String? = nil, placeOfBirth: Swift.String? = nil, residenceAddress: Swift.String? = nil, phoneNumber: Swift.String? = nil, facialImage: UIKit.UIImage? = nil, signatureImage: UIKit.UIImage? = nil, cscaValidated: Swift.Bool = false, cscaCountry: Swift.String? = nil, cscaValidationMessage: Swift.String? = nil, errorMessage: Swift.String? = nil)
 }
 public struct IDCardResult : Swift.Sendable {
   public let success: Swift.Bool
@@ -1000,6 +1004,7 @@ public struct IDCardResult : Swift.Sendable {
   public let fullName: Swift.String
   public let dateOfBirth: Swift.String
   public let sex: Swift.String
+  public let dateOfIssue: Swift.String?
   public let dateOfExpiry: Swift.String
   public let issuingAuthority: Swift.String?
   public let placeOfBirth: Swift.String?
@@ -1013,7 +1018,7 @@ public struct IDCardResult : Swift.Sendable {
   public let cscaCountry: Swift.String?
   public let cscaValidationMessage: Swift.String?
   public let errorMessage: Swift.String?
-  public init(success: Swift.Bool, documentNumber: Swift.String = "", cnp: Swift.String = "", fullName: Swift.String = "", dateOfBirth: Swift.String = "", sex: Swift.String = "", dateOfExpiry: Swift.String = "", issuingAuthority: Swift.String? = nil, placeOfBirth: Swift.String? = nil, citizenship: Swift.String? = nil, permanentAddress: Swift.String? = nil, temporaryAddress: Swift.String? = nil, foreignAddress: Swift.String? = nil, facialImage: UIKit.UIImage? = nil, signatureImage: UIKit.UIImage? = nil, cscaValidated: Swift.Bool = false, cscaCountry: Swift.String? = nil, cscaValidationMessage: Swift.String? = nil, errorMessage: Swift.String? = nil)
+  public init(success: Swift.Bool, documentNumber: Swift.String = "", cnp: Swift.String = "", fullName: Swift.String = "", dateOfBirth: Swift.String = "", sex: Swift.String = "", dateOfIssue: Swift.String? = nil, dateOfExpiry: Swift.String = "", issuingAuthority: Swift.String? = nil, placeOfBirth: Swift.String? = nil, citizenship: Swift.String? = nil, permanentAddress: Swift.String? = nil, temporaryAddress: Swift.String? = nil, foreignAddress: Swift.String? = nil, facialImage: UIKit.UIImage? = nil, signatureImage: UIKit.UIImage? = nil, cscaValidated: Swift.Bool = false, cscaCountry: Swift.String? = nil, cscaValidationMessage: Swift.String? = nil, errorMessage: Swift.String? = nil)
 }
 public struct PassportReadOptions : Swift.Sendable {
   public let enableCSCAValidation: Swift.Bool

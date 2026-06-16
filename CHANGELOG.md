@@ -5,6 +5,32 @@ All notable changes to the Romanian eID SDK will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.22] - 2026-06-16
+
+### iOS SDK
+
+#### Added
+- **Document signing (eSign sub-application)** calibrated for the
+  Romanian CEI / IDEMIA card profile. The applet selection, PIN2
+  reference, key reference, MSE:SET Authentication Template and
+  INTERNAL AUTHENTICATE sequence now match what the official IDEMIA
+  middleware uses (parameters captured via APDU trace by the
+  am-semnat-ios-sdk project).
+- **PAdES B-B inline signing** demo in the example app: PDF picker,
+  on-page signature placement, native XObject Form appearance, ECDSA
+  P-384 + SHA-384 with re-encoding of the raw `r||s` card output into
+  the canonical ECDSA-Sig-Value DER, `/ByteRange` patching and CMS
+  embed into `/Contents` (plus a `.p7s` CAdES-detached sidecar and a
+  DocMDP certifying lock).
+- Romanian and English `Localizable.strings` + an internal `L10n`
+  helper.
+
+#### Changed
+- `Package.swift` declares `defaultLocalization: "en"` – required by
+  SwiftPM once a target ships localized resources.
+
+No breaking changes vs 1.4.21.
+
 ## [1.4.21] - 2026-06-05
 
 ### iOS SDK
