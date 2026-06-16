@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
-// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -module-name RomanianEIDSDK -package-name eidromania_ios_sdk
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -module-name RomanianEIDSDK -package-name eidromania_ios_sdk
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
 import AVFoundation
 import Combine
 import CommonCrypto
@@ -10,6 +10,9 @@ import CoreNFC
 import CryptoKit
 import CryptoTokenKit
 import Foundation
+import Foundation/*.Bundle*/
+import Foundation/*.ProcessInfo*/
+import Foundation/*.URL*/
 import OSLog
 import OpenSSL
 import Security
@@ -56,9 +59,7 @@ public struct DataGroupHash {
 public class ActiveAuthenticationInfo : RomanianEIDSDK.SecurityInfo {
   override public func getObjectIdentifier() -> Swift.String
   override public func getProtocolOIDString() -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getSignatureAlgorithmOIDString() -> Swift.String?
-  #endif
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
@@ -75,11 +76,7 @@ public class COM : RomanianEIDSDK.DataGroup {
   override public var datagroupType: RomanianEIDSDK.DataGroupId {
     get
   }
-  #if compiler(>=5.3) && $IsolatedDeinit
   @objc deinit
-  #else
-  @objc deinit
-  #endif
 }
 @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
 public class CardAccess {
@@ -116,11 +113,7 @@ public class DataGroup {
   public var data: [Swift.UInt8] {
     get
   }
-  #if compiler(>=5.3) && $IsolatedDeinit
   @objc nonisolated deinit
-  #else
-  @objc deinit
-  #endif
   public func hash(_ hashAlgorythm: Swift.String) -> [Swift.UInt8]
   public func verifyTag(_ tag: Swift.Int, equals expectedTag: Swift.Int) throws
   public func verifyTag(_ tag: Swift.Int, oneOf expectedTags: [Swift.Int]) throws
@@ -130,9 +123,7 @@ public enum DocTypeEnum : Swift.String {
   case TD1
   case TD2
   case OTHER
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   @available(iOS 13, macOS 10.15, *)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -147,11 +138,7 @@ public class DataGroup1 : RomanianEIDSDK.DataGroup {
   override public var datagroupType: RomanianEIDSDK.DataGroupId {
     get
   }
-  #if compiler(>=5.3) && $IsolatedDeinit
   @objc deinit
-  #else
-  @objc deinit
-  #endif
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
 public class DataGroup11 : RomanianEIDSDK.DataGroup {
@@ -194,11 +181,7 @@ public class DataGroup11 : RomanianEIDSDK.DataGroup {
   override public var datagroupType: RomanianEIDSDK.DataGroupId {
     get
   }
-  #if compiler(>=5.3) && $IsolatedDeinit
   @objc deinit
-  #else
-  @objc deinit
-  #endif
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
 public class DataGroup12 : RomanianEIDSDK.DataGroup {
@@ -232,11 +215,7 @@ public class DataGroup12 : RomanianEIDSDK.DataGroup {
   override public var datagroupType: RomanianEIDSDK.DataGroupId {
     get
   }
-  #if compiler(>=5.3) && $IsolatedDeinit
   @objc deinit
-  #else
-  @objc deinit
-  #endif
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
 public class DataGroup14 : RomanianEIDSDK.DataGroup {
@@ -246,11 +225,7 @@ public class DataGroup14 : RomanianEIDSDK.DataGroup {
   override public var datagroupType: RomanianEIDSDK.DataGroupId {
     get
   }
-  #if compiler(>=5.3) && $IsolatedDeinit
   @objc deinit
-  #else
-  @objc deinit
-  #endif
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
 public class DataGroup15 : RomanianEIDSDK.DataGroup {
@@ -263,11 +238,7 @@ public class DataGroup15 : RomanianEIDSDK.DataGroup {
   override public var datagroupType: RomanianEIDSDK.DataGroupId {
     get
   }
-  #if compiler(>=5.3) && $IsolatedDeinit
   @objc nonisolated deinit
-  #else
-  @objc deinit
-  #endif
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
 public class DataGroup2 : RomanianEIDSDK.DataGroup {
@@ -340,11 +311,7 @@ public class DataGroup2 : RomanianEIDSDK.DataGroup {
   override public var datagroupType: RomanianEIDSDK.DataGroupId {
     get
   }
-  #if compiler(>=5.3) && $IsolatedDeinit
   @objc deinit
-  #else
-  @objc deinit
-  #endif
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
 public class DataGroup7 : RomanianEIDSDK.DataGroup {
@@ -354,11 +321,7 @@ public class DataGroup7 : RomanianEIDSDK.DataGroup {
   override public var datagroupType: RomanianEIDSDK.DataGroupId {
     get
   }
-  #if compiler(>=5.3) && $IsolatedDeinit
   @objc deinit
-  #else
-  @objc deinit
-  #endif
 }
 @available(iOS 13, macOS 10.15, *)
 public enum DataGroupId : Swift.Int, Swift.CaseIterable {
@@ -383,9 +346,7 @@ public enum DataGroupId : Swift.Int, Swift.CaseIterable {
   case Unknown
   public func getName() -> Swift.String
   public static func getIDFromName(name: Swift.String) -> RomanianEIDSDK.DataGroupId
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   @available(iOS 13, macOS 10.15, *)
   public typealias AllCases = [RomanianEIDSDK.DataGroupId]
   @available(iOS 13, macOS 10.15, *)
@@ -402,11 +363,7 @@ public class NotImplementedDG : RomanianEIDSDK.DataGroup {
   override public var datagroupType: RomanianEIDSDK.DataGroupId {
     get
   }
-  #if compiler(>=5.3) && $IsolatedDeinit
   @objc deinit
-  #else
-  @objc deinit
-  #endif
 }
 public enum PACEMappingType {
   case GM
@@ -437,9 +394,7 @@ public class PACEInfo : RomanianEIDSDK.SecurityInfo {
   override public func getObjectIdentifier() -> Swift.String
   override public func getProtocolOIDString() -> Swift.String
   public func getVersion() -> Swift.Int
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getParameterId() -> Swift.Int?
-  #endif
   public func getParameterSpec() throws -> Swift.Int32
   public func getMappingType() throws -> RomanianEIDSDK.PACEMappingType
   public func getKeyAgreementAlgorithm() throws -> Swift.String
@@ -498,11 +453,9 @@ public enum NFCPassportReaderError : Swift.Error {
 }
 @available(iOS 13, macOS 10.15, *)
 extension RomanianEIDSDK.NFCPassportReaderError : Foundation.LocalizedError {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
-  #endif
 }
 @available(iOS 13, macOS 10.15, *)
 public enum OpenSSLError : Swift.Error {
@@ -517,11 +470,9 @@ public enum OpenSSLError : Swift.Error {
 }
 @available(iOS 13, macOS 10.15, *)
 extension RomanianEIDSDK.OpenSSLError : Foundation.LocalizedError {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
-  #endif
 }
 public enum PassiveAuthenticationError : Swift.Error {
   case UnableToParseSODHashes(Swift.String)
@@ -529,11 +480,9 @@ public enum PassiveAuthenticationError : Swift.Error {
   case SODMissing(Swift.String)
 }
 extension RomanianEIDSDK.PassiveAuthenticationError : Foundation.LocalizedError {
-  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
-  #endif
 }
 public struct FaceImageInfo : Swift.Equatable {
   public enum Expression : Swift.Int {
@@ -545,12 +494,8 @@ public struct FaceImageInfo : Swift.Equatable {
     case eyesLookingAway
     case squinting
     case frowning
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func from(_ code: Swift.Int) -> RomanianEIDSDK.FaceImageInfo.Expression?
-    #endif
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
-    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -566,12 +511,8 @@ public struct FaceImageInfo : Swift.Equatable {
     case multiColored
     case pink
     case unknown
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func from(_ code: Swift.Int) -> RomanianEIDSDK.FaceImageInfo.EyeColor?
-    #endif
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
-    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -581,12 +522,8 @@ public struct FaceImageInfo : Swift.Equatable {
     case basic
     case fullFrontal
     case tokenFrontal
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func from(_ code: Swift.Int) -> RomanianEIDSDK.FaceImageInfo.FaceImageType?
-    #endif
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
-    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -604,12 +541,8 @@ public struct FaceImageInfo : Swift.Equatable {
     case rightEyePath
     case darkGlasses
     case distortingMedicalCondition
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func from(_ code: Swift.Int) -> RomanianEIDSDK.FaceImageInfo.Features?
-    #endif
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
-    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -627,12 +560,8 @@ public struct FaceImageInfo : Swift.Equatable {
     case green
     case blue
     case unknown
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func from(_ code: Swift.Int) -> RomanianEIDSDK.FaceImageInfo.HairColor?
-    #endif
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
-    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -644,12 +573,8 @@ public struct FaceImageInfo : Swift.Equatable {
     case yuv422
     case gray8
     case other
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func from(_ code: Swift.Int) -> RomanianEIDSDK.FaceImageInfo.ImageColorSpace?
-    #endif
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
-    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -658,12 +583,8 @@ public struct FaceImageInfo : Swift.Equatable {
   public enum ImageDataType : Swift.Int {
     case jpeg
     case jpeg2000
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func from(_ code: Swift.Int) -> RomanianEIDSDK.FaceImageInfo.ImageDataType?
-    #endif
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
-    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -678,12 +599,8 @@ public struct FaceImageInfo : Swift.Equatable {
     case videoFrameAnalogCam
     case videoFrameDigitalCam
     case unknown
-    #if compiler(>=5.3) && $NonescapableTypes
     public static func from(_ code: Swift.Int) -> RomanianEIDSDK.FaceImageInfo.SourceType?
-    #endif
-    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
-    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -736,41 +653,27 @@ public class NFCPassportModel {
   public var passportMRZ: Swift.String {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var placeOfBirth: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var residenceAddress: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var phoneNumber: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var personalNumber: Swift.String? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var faceImageInfo: RomanianEIDSDK.FaceImageInfo? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var documentSigningCertificate: RomanianEIDSDK.X509Wrapper? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var countrySigningCertificate: RomanianEIDSDK.X509Wrapper? {
     get
   }
-  #endif
   public var LDSVersion: Swift.String {
     get
   }
@@ -825,30 +728,22 @@ public class NFCPassportModel {
   public var isChipAuthenticationSupported: Swift.Bool {
     get
   }
-  #if compiler(>=5.3) && $NonescapableTypes
   public var passportImage: UIKit.UIImage? {
     get
   }
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public var signatureImage: UIKit.UIImage? {
     get
   }
-  #endif
   public var activeAuthenticationSupported: Swift.Bool {
     get
   }
   public init()
   public init(from dump: [Swift.String : Swift.String])
   public func addDataGroup(_ id: RomanianEIDSDK.DataGroupId, dataGroup: RomanianEIDSDK.DataGroup)
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getDataGroup(_ id: RomanianEIDSDK.DataGroupId) -> RomanianEIDSDK.DataGroup?
-  #endif
   public func dumpPassportData(selectedDataGroups: [RomanianEIDSDK.DataGroupId], includeActiveAuthenticationData: Swift.Bool = false) -> [Swift.String : Swift.String]
   public func getHashesForDatagroups(hashAlgorythm: Swift.String) -> [RomanianEIDSDK.DataGroupId : [Swift.UInt8]]
-  #if compiler(>=5.3) && $NonescapableTypes
   public func verifyPassport(masterListURL: Foundation.URL?, useCMSVerification: Swift.Bool = false)
-  #endif
   public func verifyActiveAuthentication(challenge: [Swift.UInt8], signature: [Swift.UInt8])
   @objc deinit
 }
@@ -898,14 +793,10 @@ public protocol PassportReaderTrackingDelegate : AnyObject {
 public class PassportReader : ObjectiveC.NSObject {
   weak public var trackingDelegate: (any RomanianEIDSDK.PassportReaderTrackingDelegate)?
   public var passiveAuthenticationUsesOpenSSL: Swift.Bool
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(masterListURL: Foundation.URL? = nil)
-  #endif
   public func setMasterListURL(_ masterListURL: Foundation.URL)
   public func overrideNFCDataAmountToRead(amount: Swift.Int)
-  #if compiler(>=5.3) && $NonescapableTypes
   public func readPassport(mrzKey: Swift.String? = nil, can: Swift.String? = nil, tags: [RomanianEIDSDK.DataGroupId] = [], skipSecureElements: Swift.Bool = true, skipCA: Swift.Bool = false, skipPACE: Swift.Bool = false, useExtendedMode: Swift.Bool = false, customDisplayMessage: ((RomanianEIDSDK.NFCViewDisplayMessage) -> Swift.String?)? = nil) async throws -> RomanianEIDSDK.NFCPassportModel
-  #endif
   @objc deinit
 }
 @available(iOS 15, *)
@@ -947,9 +838,7 @@ public class SecureMessaging {
 @available(iOS 13, macOS 10.15, *)
 public class ASN1Item : Swift.CustomDebugStringConvertible {
   public init(line: Swift.String)
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getChild(_ child: Swift.Int) -> RomanianEIDSDK.ASN1Item?
-  #endif
   public func getNumberOfChildren() -> Swift.Int
   public var debugDescription: Swift.String {
     get
@@ -1032,9 +921,7 @@ public enum CertificateItem : Swift.String {
   case publicKeyAlgorithm
   case notBefore
   case notAfter
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   @available(iOS 13, macOS 10.15, *)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -1044,48 +931,26 @@ public enum CertificateItem : Swift.String {
 @available(iOS 13, macOS 10.15, *)
 public class X509Wrapper {
   final public let cert: Swift.OpaquePointer
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(with cert: Swift.OpaquePointer?)
-  #endif
   public func getItemsAsDict() -> [RomanianEIDSDK.CertificateItem : Swift.String]
   public func certToPEM() -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getFingerprint() -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getNotBeforeDate() -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getNotAfterDate() -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getSerialNumber() -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getSignatureAlgorithm() -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getPublicKeyAlgorithm() -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getIssuerName() -> Swift.String?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   public func getSubjectName() -> Swift.String?
-  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
 public class OpenSSLUtils {
   public static func getOpenSSLError() -> Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 13, macOS 10.15, *)
   public static func getPublicKeyData(from key: Swift.OpaquePointer) -> [Swift.UInt8]?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 13, macOS 10.15, *)
   public static func decodePublicKeyFromBytes(pubKeyData: [Swift.UInt8], params: Swift.OpaquePointer) -> Swift.OpaquePointer?
-  #endif
   public static func computeSharedSecret(privateKeyPair: Swift.OpaquePointer, publicKey: Swift.OpaquePointer) -> [Swift.UInt8]
   @objc deinit
 }
@@ -1103,17 +968,26 @@ final public class EIDLicenseManager {
   final public func hasFeature(_ feature: RomanianEIDSDK.LicenseFeature) -> Swift.Bool
   @objc deinit
 }
+public enum EIDLocalization {
+  public static var languageDidChangeNotification: Foundation.Notification.Name {
+    get
+  }
+  public static var currentLanguage: Swift.String? {
+    get
+  }
+  public static func setLanguage(_ languageCode: Swift.String?)
+  public static var availableLanguages: [Swift.String] {
+    get
+  }
+  public static func localizedString(forKey key: Swift.String) -> Swift.String
+}
 extension RomanianEIDSDK.PassportResult {
   public func toJSON() -> [Swift.String : Any]
-  #if compiler(>=5.3) && $NonescapableTypes
   public func toJSONString(prettyPrinted: Swift.Bool = false) -> Swift.String?
-  #endif
 }
 extension RomanianEIDSDK.IDCardResult {
   public func toJSON() -> [Swift.String : Any]
-  #if compiler(>=5.3) && $NonescapableTypes
   public func toJSONString(prettyPrinted: Swift.Bool = false) -> Swift.String?
-  #endif
 }
 public struct PassportResult : Swift.Sendable {
   public let success: Swift.Bool
@@ -1121,6 +995,7 @@ public struct PassportResult : Swift.Sendable {
   public let fullName: Swift.String
   public let dateOfBirth: Swift.String
   public let nationality: Swift.String
+  public let issuingCountry: Swift.String?
   public let sex: Swift.String
   public let dateOfExpiry: Swift.String
   public let cnp: Swift.String?
@@ -1133,9 +1008,7 @@ public struct PassportResult : Swift.Sendable {
   public let cscaCountry: Swift.String?
   public let cscaValidationMessage: Swift.String?
   public let errorMessage: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(success: Swift.Bool, documentNumber: Swift.String = "", fullName: Swift.String = "", dateOfBirth: Swift.String = "", nationality: Swift.String = "", sex: Swift.String = "", dateOfExpiry: Swift.String = "", cnp: Swift.String? = nil, placeOfBirth: Swift.String? = nil, residenceAddress: Swift.String? = nil, phoneNumber: Swift.String? = nil, facialImage: UIKit.UIImage? = nil, signatureImage: UIKit.UIImage? = nil, cscaValidated: Swift.Bool = false, cscaCountry: Swift.String? = nil, cscaValidationMessage: Swift.String? = nil, errorMessage: Swift.String? = nil)
-  #endif
+  public init(success: Swift.Bool, documentNumber: Swift.String = "", fullName: Swift.String = "", dateOfBirth: Swift.String = "", nationality: Swift.String = "", issuingCountry: Swift.String? = nil, sex: Swift.String = "", dateOfExpiry: Swift.String = "", cnp: Swift.String? = nil, placeOfBirth: Swift.String? = nil, residenceAddress: Swift.String? = nil, phoneNumber: Swift.String? = nil, facialImage: UIKit.UIImage? = nil, signatureImage: UIKit.UIImage? = nil, cscaValidated: Swift.Bool = false, cscaCountry: Swift.String? = nil, cscaValidationMessage: Swift.String? = nil, errorMessage: Swift.String? = nil)
 }
 public struct IDCardResult : Swift.Sendable {
   public let success: Swift.Bool
@@ -1144,6 +1017,7 @@ public struct IDCardResult : Swift.Sendable {
   public let fullName: Swift.String
   public let dateOfBirth: Swift.String
   public let sex: Swift.String
+  public let dateOfIssue: Swift.String?
   public let dateOfExpiry: Swift.String
   public let issuingAuthority: Swift.String?
   public let placeOfBirth: Swift.String?
@@ -1157,9 +1031,7 @@ public struct IDCardResult : Swift.Sendable {
   public let cscaCountry: Swift.String?
   public let cscaValidationMessage: Swift.String?
   public let errorMessage: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init(success: Swift.Bool, documentNumber: Swift.String = "", cnp: Swift.String = "", fullName: Swift.String = "", dateOfBirth: Swift.String = "", sex: Swift.String = "", dateOfExpiry: Swift.String = "", issuingAuthority: Swift.String? = nil, placeOfBirth: Swift.String? = nil, citizenship: Swift.String? = nil, permanentAddress: Swift.String? = nil, temporaryAddress: Swift.String? = nil, foreignAddress: Swift.String? = nil, facialImage: UIKit.UIImage? = nil, signatureImage: UIKit.UIImage? = nil, cscaValidated: Swift.Bool = false, cscaCountry: Swift.String? = nil, cscaValidationMessage: Swift.String? = nil, errorMessage: Swift.String? = nil)
-  #endif
+  public init(success: Swift.Bool, documentNumber: Swift.String = "", cnp: Swift.String = "", fullName: Swift.String = "", dateOfBirth: Swift.String = "", sex: Swift.String = "", dateOfIssue: Swift.String? = nil, dateOfExpiry: Swift.String = "", issuingAuthority: Swift.String? = nil, placeOfBirth: Swift.String? = nil, citizenship: Swift.String? = nil, permanentAddress: Swift.String? = nil, temporaryAddress: Swift.String? = nil, foreignAddress: Swift.String? = nil, facialImage: UIKit.UIImage? = nil, signatureImage: UIKit.UIImage? = nil, cscaValidated: Swift.Bool = false, cscaCountry: Swift.String? = nil, cscaValidationMessage: Swift.String? = nil, errorMessage: Swift.String? = nil)
 }
 public struct PassportReadOptions : Swift.Sendable {
   public let enableCSCAValidation: Swift.Bool
@@ -1195,15 +1067,11 @@ public struct MRZScanResult : Swift.Sendable, Swift.Hashable {
   public let personalNumber: Swift.String?
   public let fullMRZ: Swift.String
   public let mrzKey: Swift.String
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(documentType: Swift.String, issuingCountry: Swift.String, documentNumber: Swift.String, surname: Swift.String, givenNames: Swift.String, nationality: Swift.String, sex: Swift.String, dateOfBirth: Swift.String, dateOfExpiry: Swift.String, personalNumber: Swift.String? = nil, fullMRZ: Swift.String, mrzKey: Swift.String)
-  #endif
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (lhs: RomanianEIDSDK.MRZScanResult, rhs: RomanianEIDSDK.MRZScanResult) -> Swift.Bool
   public func toJSON() -> [Swift.String : Any]
-  #if compiler(>=5.3) && $NonescapableTypes
   public func toJSONString() -> Swift.String?
-  #endif
   public var hashValue: Swift.Int {
     get
   }
@@ -1229,15 +1097,11 @@ public struct OCRScanResult : Swift.Sendable, Swift.Hashable {
   public let rawText: Swift.String
   public let validationIssues: [Swift.String]
   public let errorMessage: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(success: Swift.Bool, documentNumber: Swift.String? = nil, cnp: Swift.String? = nil, fullName: Swift.String? = nil, surname: Swift.String? = nil, givenNames: Swift.String? = nil, dateOfBirth: Swift.String? = nil, sex: Swift.String? = nil, nationality: Swift.String? = nil, placeOfBirth: Swift.String? = nil, permanentAddress: Swift.String? = nil, issuingAuthority: Swift.String? = nil, dateOfIssue: Swift.String? = nil, dateOfExpiry: Swift.String? = nil, facePhoto: UIKit.UIImage? = nil, confidence: Swift.Float = 0.0, isReliable: Swift.Bool = false, rawText: Swift.String = "", validationIssues: [Swift.String] = [], errorMessage: Swift.String? = nil)
-  #endif
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (lhs: RomanianEIDSDK.OCRScanResult, rhs: RomanianEIDSDK.OCRScanResult) -> Swift.Bool
   public func toJSON() -> [Swift.String : Any]
-  #if compiler(>=5.3) && $NonescapableTypes
   public func toJSONString() -> Swift.String?
-  #endif
   public var hashValue: Swift.Int {
     get
   }
@@ -1263,9 +1127,7 @@ public struct LicenseValidationResult : Swift.Sendable {
   public let expiryDate: Foundation.Date?
   public let features: [RomanianEIDSDK.LicenseFeature]
   public let tier: RomanianEIDSDK.LicenseTier?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(isValid: Swift.Bool, message: Swift.String, expiryDate: Foundation.Date?, features: [RomanianEIDSDK.LicenseFeature], tier: RomanianEIDSDK.LicenseTier?)
-  #endif
 }
 public enum LicenseFeature : Swift.String, Swift.Sendable, Swift.CaseIterable {
   case passportReading
@@ -1274,9 +1136,8 @@ public enum LicenseFeature : Swift.String, Swift.Sendable, Swift.CaseIterable {
   case cscaValidation
   case biometricExtraction
   case advancedSecurity
-  #if compiler(>=5.3) && $NonescapableTypes
+  case documentSigning
   public init?(rawValue: Swift.String)
-  #endif
   public typealias AllCases = [RomanianEIDSDK.LicenseFeature]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [RomanianEIDSDK.LicenseFeature] {
@@ -1293,9 +1154,7 @@ public enum LicenseTier : Swift.String, Swift.Sendable {
   case basic
   case pro
   case enterprise
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1307,9 +1166,7 @@ public enum LogLevel : Swift.Int, Swift.Sendable {
   case warning
   case info
   case debug
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
-  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1331,13 +1188,43 @@ public enum EIDError : Swift.Error, Foundation.LocalizedError {
   case userCancelled
   case cscaValidationFailed(Swift.String)
   case signatureInvalid
+  case signingPINIncorrect(remainingAttempts: Swift.Int)
+  case signingPINBlocked
+  case signingAppletNotFound
+  case signingFailed(Swift.String)
+  case signingCertificateUnavailable(Swift.String)
+  case invalidHashLength
   case readFailed(Swift.String)
   case unexpectedError(Swift.String)
-  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
-  #endif
+}
+public enum SigningHashAlgorithm : Swift.String, Swift.Sendable {
+  case sha256
+  case sha384
+  case sha512
+  public var hashLength: Swift.Int {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct SigningOptions : Swift.Sendable {
+  public let hashAlgorithm: RomanianEIDSDK.SigningHashAlgorithm
+  public let timeout: Foundation.TimeInterval
+  public let logLevel: RomanianEIDSDK.LogLevel
+  public static let `default`: RomanianEIDSDK.SigningOptions
+  public init(hashAlgorithm: RomanianEIDSDK.SigningHashAlgorithm = .sha256, timeout: Foundation.TimeInterval = 60, logLevel: RomanianEIDSDK.LogLevel = .warning)
+}
+public struct CardSignatureResult : Swift.Sendable {
+  public let signature: Foundation.Data
+  public let certificate: Foundation.Data
+  public let hashAlgorithm: RomanianEIDSDK.SigningHashAlgorithm
+  public init(signature: Foundation.Data, certificate: Foundation.Data, hashAlgorithm: RomanianEIDSDK.SigningHashAlgorithm)
 }
 @_hasMissingDesignatedInitializers @available(iOS 15.0, *)
 final public class EIDReader {
@@ -1347,28 +1234,17 @@ final public class EIDReader {
   }
   public static let version: Swift.String
   public static let requiredISO7816Identifiers: [Swift.String]
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func readPassport(mrzKey: Swift.String, options: RomanianEIDSDK.PassportReadOptions = .default, delegate: (any RomanianEIDSDK.EIDReadDelegate)? = nil) async throws -> RomanianEIDSDK.PassportResult
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func startOCRScanning(from presentingViewController: UIKit.UIViewController, delegate: (any RomanianEIDSDK.EIDReadDelegate)? = nil) async throws -> RomanianEIDSDK.OCRScanResult
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func startMRZScanning(from presentingViewController: UIKit.UIViewController, delegate: (any RomanianEIDSDK.EIDReadDelegate)? = nil) async throws -> RomanianEIDSDK.MRZScanResult
-  #endif
   final public func scanIDCard(image: UIKit.UIImage) async throws -> RomanianEIDSDK.OCRScanResult
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func readIDCard(can: Swift.String, pin: Swift.String, options: RomanianEIDSDK.IDCardReadOptions = .default, delegate: (any RomanianEIDSDK.EIDReadDelegate)? = nil) async throws -> RomanianEIDSDK.IDCardResult
-  #endif
+  final public func signHash(hash: Foundation.Data, can: Swift.String, signingPIN: Swift.String, options: RomanianEIDSDK.SigningOptions = .default, delegate: (any RomanianEIDSDK.EIDReadDelegate)? = nil) async throws -> RomanianEIDSDK.CardSignatureResult
   final public func saveIDCard(_ result: RomanianEIDSDK.IDCardResult) throws
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func loadIDCard() throws -> RomanianEIDSDK.IDCardResult?
-  #endif
   final public func deleteIDCard() throws
   final public func savePassport(_ result: RomanianEIDSDK.PassportResult) throws
-  #if compiler(>=5.3) && $NonescapableTypes
   final public func loadPassport() throws -> RomanianEIDSDK.PassportResult?
-  #endif
   final public func deletePassport() throws
   @objc deinit
 }
@@ -1442,3 +1318,6 @@ extension RomanianEIDSDK.LicenseTier : Swift.RawRepresentable {}
 extension RomanianEIDSDK.LogLevel : Swift.Equatable {}
 extension RomanianEIDSDK.LogLevel : Swift.Hashable {}
 extension RomanianEIDSDK.LogLevel : Swift.RawRepresentable {}
+extension RomanianEIDSDK.SigningHashAlgorithm : Swift.Equatable {}
+extension RomanianEIDSDK.SigningHashAlgorithm : Swift.Hashable {}
+extension RomanianEIDSDK.SigningHashAlgorithm : Swift.RawRepresentable {}

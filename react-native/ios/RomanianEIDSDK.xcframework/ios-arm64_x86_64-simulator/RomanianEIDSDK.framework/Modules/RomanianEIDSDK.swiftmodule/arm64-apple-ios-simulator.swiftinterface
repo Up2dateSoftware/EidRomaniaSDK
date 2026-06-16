@@ -968,6 +968,19 @@ final public class EIDLicenseManager {
   final public func hasFeature(_ feature: RomanianEIDSDK.LicenseFeature) -> Swift.Bool
   @objc deinit
 }
+public enum EIDLocalization {
+  public static var languageDidChangeNotification: Foundation.Notification.Name {
+    get
+  }
+  public static var currentLanguage: Swift.String? {
+    get
+  }
+  public static func setLanguage(_ languageCode: Swift.String?)
+  public static var availableLanguages: [Swift.String] {
+    get
+  }
+  public static func localizedString(forKey key: Swift.String) -> Swift.String
+}
 extension RomanianEIDSDK.PassportResult {
   public func toJSON() -> [Swift.String : Any]
   public func toJSONString(prettyPrinted: Swift.Bool = false) -> Swift.String?

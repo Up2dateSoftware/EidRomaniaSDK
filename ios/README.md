@@ -1,340 +1,278 @@
-# Romanian eID SDK
+# Romanian eID SDK – iOS
 
-Professional iOS SDK for reading Romanian electronic identity documents (eID cards and ePassports) via NFC, with OCR and MRZ scanning capabilities.
+Modern Swift SDK for reading and signing with Romanian electronic identity
+documents (ePassports and eID cards) via NFC.
 
 ## Features
 
-### 🆔 ID Card Reading (NFC)
-- Read Romanian electronic ID cards via NFC
-- Extract personal data (name, CNP, address, dates)
-- Retrieve facial photo from chip
-- PACE authentication support
-- CSCA certificate validation
-
-### 🛂 Passport Reading (NFC + MRZ)
-- Read Romanian ePassports via NFC with PACE/BAC
-- **MRZ Scanner** - Camera-based Machine Readable Zone scanning
-- Extract biometric data and photo
-- Full ICAO 9303 compliance
-- CSCA validation for document authenticity
-
-### 📸 OCR Scanning
-- OCR scanning for old non-NFC ID cards
-- Multi-pass recognition with confidence scoring
-- Extract CNP, name, address, dates
-- Vision framework integration
-
-### 🔒 Security & Licensing
-- JWT-based licensing system
-- Feature-based access control
-- Secure data handling
-- No debug logging in production
+- **Passport reading** – BAC/PACE, DG1/DG2/DG7/DG11/DG12/SOD
+- **eID card reading** – PACE with CAN + PIN, full personal data + addresses
+- **Document signing** – ECDSA P-384 / SHA-384 on the on-card eSign sub-application
+  (Romanian CEI / IDEMIA profile). Returns the raw signature + DER signer certificate
+  so the caller can wrap it into CMS / PAdES / CAdES.
+- **MRZ camera scanning** – Vision-based OCR for passport MRZ
+- **OCR for legacy ID cards** – Camera flow or direct `UIImage`
+- **CSCA validation** – Document signer chain against the bundled CSCA master list
+- **Biometric extraction** – Photo + signature from the chip
+- **Runtime language switching** – `EIDLocalization.setLanguage("ro" | "en" | nil)`
+- **Keychain persistence** – save / load / delete results securely
+- **JWS license** – offline, signed token validation
 
 ## Requirements
 
-- iOS 17.6+
-- Xcode 15.0+
-- Swift 5.9+
-- Physical device with NFC capability (for NFC features)
-- Camera access (for OCR/MRZ scanning)
+- iOS **15.0+**
+- Xcode 15+ / Swift 5.9+
+- iPhone 7 or later (for NFC)
+- Valid SDK license (`office@up2date.ro`)
 
 ## Installation
 
-### Manual Integration
+### Swift Package Manager (recommended)
 
-1. Download the latest `RomanianEIDSDK.xcframework.zip` from [Releases](https://github.com/yourusername/RomanianEIDSDK/releases)
-2. Unzip and drag `RomanianEIDSDK.xcframework` into your Xcode project
-3. In your target's **General** tab, add the framework to **Frameworks, Libraries, and Embedded Content**
-4. Set to **Embed & Sign**
+```
+https://github.com/Up2dateSoftware/EidRomaniaSDK.git
+```
 
-### Required Permissions
+```swift
+.package(url: "https://github.com/Up2dateSoftware/EidRomaniaSDK.git", exact: "1.4.23")
+```
 
-Add these keys to your `Info.plist`:
+### Manual XCFramework
+
+1. Download `RomanianEIDSDK.xcframework.zip` from the latest [Release](https://github.com/Up2dateSoftware/EidRomaniaSDK/releases)
+2. Drag `RomanianEIDSDK.xcframework` into your target
+3. Set it to **Embed & Sign**
+
+### Info.plist & entitlements
 
 ```xml
 <key>NFCReaderUsageDescription</key>
-<string>We need NFC access to read your eID card or passport</string>
+<string>We need NFC to read your electronic ID document</string>
+
 <key>NSCameraUsageDescription</key>
-<string>We need camera access to scan MRZ or perform OCR</string>
+<string>We need camera access to scan MRZ codes or photograph ID cards</string>
+```
+
+```xml
 <key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
 <array>
-    <string>A0000002471001</string>
-    <string>A0000002472001</string>
+    <string>A0000002471001</string>                   <!-- ePassport MRTD -->
+    <string>A000000077030C60000000FE00000500</string> <!-- Romanian National Application -->
+    <string>E828BD080FA000000167454441544100</string> <!-- Romanian eDATA Application -->
+    <string>A000000077010800070000FE00000100</string> <!-- CEN DF.eSign (signing) -->
 </array>
 ```
 
-## Quick Start
+These identifiers are also exposed as `EIDReader.requiredISO7816Identifiers`.
 
-### 1. Initialize SDK with License
+## Quick start
 
-```swift
-import RomanianEIDSDK
-
-// In AppDelegate or App struct
-do {
-    try await EIDReader.shared.initialize(licenseJWT: "your-license-jwt")
-    print("SDK ready!")
-} catch {
-    print("License error: \(error)")
-}
-```
-
-### 2. Read ID Card (NFC)
+### 1 · Initialize the license
 
 ```swift
 import RomanianEIDSDK
 
-class IDCardViewController: UIViewController {
-    func readIDCard() {
-        Task {
-            do {
-                let result = try await EIDReader.shared.readIDCard(
-                    from: self,
-                    options: IDCardReadOptions(
-                        enableCSCAValidation: true,
-                        timeout: 60
-                    )
-                )
-
-                print("Name: \(result.fullName)")
-                print("CNP: \(result.cnp)")
-                if let photo = result.facialImage {
-                    imageView.image = photo
-                }
-            } catch {
-                print("Read failed: \(error)")
-            }
-        }
-    }
-}
+try EIDLicenseManager.shared.initialize(licenseKey: "<your-JWS-token>")
+guard EIDReader.shared.isReady else { return }
 ```
 
-### 3. Read Passport with MRZ Scanner
+### 2 · Read a passport
 
 ```swift
-func readPassport() {
-    Task {
-        do {
-            // Step 1: Scan MRZ with camera
-            let mrzResult = try await EIDReader.shared.startMRZScanning(from: self)
-
-            print("MRZ Key: \(mrzResult.mrzKey)")
-            print("Passport: \(mrzResult.documentNumber)")
-
-            // Step 2: Read passport chip with NFC
-            let passportResult = try await EIDReader.shared.readPassport(
-                mrzKey: mrzResult.mrzKey,
-                options: PassportReadOptions(
-                    enableCSCAValidation: true,
-                    timeout: 60
-                )
-            )
-
-            print("Name: \(passportResult.fullName)")
-            if let photo = passportResult.facialImage {
-                imageView.image = photo
-            }
-        } catch {
-            print("Error: \(error)")
-        }
-    }
-}
+let passport = try await EIDReader.shared.readPassport(
+    mrzKey: "RO1234567<0850315301231",
+    options: PassportReadOptions(enableCSCAValidation: true, timeout: 60)
+)
+print(passport.fullName, passport.documentNumber, passport.cnp ?? "-")
 ```
 
-### 4. OCR Scanning (Old ID Cards)
+### 3 · Read an eID card
 
 ```swift
-func scanOldIDCard() {
-    Task {
-        do {
-            let result = try await EIDReader.shared.startOCRScanning(from: self)
-
-            if result.isReliable {
-                print("Name: \(result.fullName ?? "")")
-                print("CNP: \(result.cnp ?? "")")
-                print("Confidence: \(result.confidence * 100)%")
-            }
-        } catch {
-            print("OCR failed: \(error)")
-        }
-    }
-}
+let card = try await EIDReader.shared.readIDCard(
+    can: "123456",
+    pin: "1234",                       // data PIN (4–8 digits)
+    options: IDCardReadOptions(
+        enableCSCAValidation: true,
+        readPhoto: true,
+        readSignature: true,
+        timeout: 90
+    )
+)
+print(card.cnp, card.permanentAddress ?? "-", card.issuingAuthority ?? "-")
 ```
 
-## API Reference
+> 1.4.x change · `readIDCard` requires the data PIN as a parameter.
 
-### EIDReader
-
-Main SDK class (singleton):
+### 4 · Sign a hash with the card's eSign sub-application
 
 ```swift
-public class EIDReader {
-    static let shared: EIDReader
+let digest = SHA384.hash(data: pdfBytes)            // 48-byte SHA-384
+let hash = Data(digest)
 
-    // Initialization
-    func initialize(licenseJWT: String) async throws
-    var isReady: Bool { get }
+let result = try await EIDReader.shared.signHash(
+    hash: hash,
+    can: "123456",
+    signingPIN: "123456",               // signing PIN (separate from the data PIN)
+    options: SigningOptions(hashAlgorithm: .sha384, timeout: 60)
+)
 
-    // ID Card Reading
-    func readIDCard(from: UIViewController, options: IDCardReadOptions) async throws -> IDCardResult
-
-    // Passport Reading
-    func readPassport(mrzKey: String, options: PassportReadOptions) async throws -> PassportResult
-
-    // MRZ Scanning
-    func startMRZScanning(from: UIViewController) async throws -> MRZScanResult
-
-    // OCR Scanning
-    func startOCRScanning(from: UIViewController) async throws -> OCRScanResult
-}
+let rawSignature = result.signature      // raw r||s from the card (96 B for P-384)
+let signerCertDER = result.certificate   // DER-encoded X.509 signing certificate
 ```
 
-### Result Models
+Wrap `result` into CMS / PAdES / CAdES on the device or send it to a
+backend. The example app ships a full PAdES B-B inline implementation
+with a CAdES-detached `.p7s` sidecar.
 
-#### IDCardResult
-```swift
-public struct IDCardResult {
-    let success: Bool
-    let documentNumber: String
-    let cnp: String
-    let fullName: String
-    let dateOfBirth: String
-    let sex: String
-    let dateOfExpiry: String
-    let permanentAddress: String?
-    let facialImage: UIImage?
-    let cscaValidated: Bool
-}
-```
-
-#### PassportResult
-```swift
-public struct PassportResult {
-    let success: Bool
-    let documentNumber: String
-    let fullName: String
-    let dateOfBirth: String
-    let nationality: String
-    let sex: String
-    let dateOfExpiry: String
-    let facialImage: UIImage?
-    let cscaValidated: Bool
-}
-```
-
-#### MRZScanResult
-```swift
-public struct MRZScanResult {
-    let documentType: String
-    let issuingCountry: String
-    let documentNumber: String
-    let surname: String
-    let givenNames: String
-    let nationality: String
-    let sex: String
-    let dateOfBirth: String
-    let dateOfExpiry: String
-    let mrzKey: String  // For BAC/PACE authentication
-}
-```
-
-#### OCRScanResult
-```swift
-public struct OCRScanResult {
-    let success: Bool
-    let documentNumber: String?
-    let cnp: String?
-    let fullName: String?
-    let dateOfBirth: String?
-    let confidence: Float  // 0.0 - 1.0
-    let isReliable: Bool   // true if confidence > 0.7
-}
-```
-
-## Licensing
-
-The SDK requires a valid JWT license. Features can be enabled/disabled per license:
-
-- `idCardReading` - NFC ID card reading
-- `passportReading` - NFC passport reading + MRZ scanner
-- `ocrScanning` - OCR for old cards
-
-Contact sales for licensing: [office@up2date.ro](mailto:office@up2date.ro)
-
-## Demo Application
-
-The `DemoApp` folder contains a complete example application demonstrating:
-- ID Card reading with NFC
-- Passport reading with MRZ scanner
-- OCR scanning for old cards
-- License initialization
-- Error handling
-- Result display
-
-## Error Handling
+### 5 · MRZ + OCR camera flows
 
 ```swift
-do {
-    let result = try await EIDReader.shared.readIDCard(from: self)
-} catch EIDError.licenseInvalid {
-    // Invalid or expired license
-} catch EIDError.licenseExpired {
-    // License has expired
-} catch EIDError.featureNotLicensed(let feature) {
-    // Feature not included in license
-} catch EIDError.nfcNotAvailable {
-    // Device doesn't support NFC
-} catch EIDError.userCancelled {
-    // User cancelled the operation
-} catch EIDError.readFailed(let reason) {
-    // Reading failed with reason
-} catch {
-    // Other errors
+let mrz = try await EIDReader.shared.startMRZScanning(from: self)
+// feed mrz.mrzKey straight into readPassport(...)
+
+let ocr = try await EIDReader.shared.startOCRScanning(from: self)
+// or, from an existing UIImage:
+let ocr2 = try await EIDReader.shared.scanIDCard(image: somePhoto)
+```
+
+### 6 · Runtime language switching
+
+```swift
+EIDLocalization.setLanguage("ro")
+EIDLocalization.setLanguage("en")
+EIDLocalization.setLanguage(nil)        // follow iOS Settings
+
+NotificationCenter.default.addObserver(
+    forName: EIDLocalization.languageDidChangeNotification,
+    object: nil,
+    queue: .main
+) { _ in /* refresh UI */ }
+```
+
+NFC alert messages, progress callbacks and `EIDError.localizedDescription`
+all follow the override immediately – no app restart required.
+
+### 7 · Secure persistence (Keychain)
+
+```swift
+try EIDReader.shared.saveIDCard(card)
+let restored = try EIDReader.shared.loadIDCard()
+try EIDReader.shared.deleteIDCard()
+
+try EIDReader.shared.savePassport(passport)
+let restoredPP = try EIDReader.shared.loadPassport()
+try EIDReader.shared.deletePassport()
+```
+
+Encrypted with AES-256-GCM; images base64-encoded.
+
+## Public API surface
+
+```swift
+EIDReader.shared
+    .readPassport(mrzKey:, options:, delegate:) async throws -> PassportResult
+    .readIDCard(can:, pin:, options:, delegate:) async throws -> IDCardResult
+    .signHash(hash:, can:, signingPIN:, options:, delegate:) async throws
+        -> CardSignatureResult
+    .startMRZScanning(from:, delegate:) async throws -> MRZScanResult
+    .startOCRScanning(from:, delegate:) async throws -> OCRScanResult
+    .scanIDCard(image:) async throws -> OCRScanResult
+    .saveIDCard / loadIDCard / deleteIDCard
+    .savePassport / loadPassport / deletePassport
+```
+
+```swift
+EIDLocalization.setLanguage(_:)
+EIDLocalization.currentLanguage / availableLanguages
+EIDLocalization.languageDidChangeNotification
+EIDLocalization.localizedString(forKey:)
+
+EIDLicenseManager.shared
+    .initialize(licenseKey:)
+    .validateLicense()
+    .hasFeature(_:)
+    .licenseInfo
+
+enum LicenseFeature {
+    case passportReading, idCardReading, ocrScanning,
+         cscaValidation, biometricExtraction,
+         advancedSecurity, documentSigning
 }
 ```
 
-## System Requirements
+### Result models
 
-### NFC Reading
-- iPhone 7 or newer (iPhone XS or newer recommended for better NFC performance)
-- iOS 17.6+
+| Type | Highlights |
+|---|---|
+| `PassportResult` | `documentNumber`, `fullName`, `dateOfBirth`, `nationality`, `issuingCountry`, `sex`, `dateOfExpiry`, `cnp?`, `placeOfBirth?`, `residenceAddress?`, `phoneNumber?`, `facialImage?`, `signatureImage?`, CSCA fields |
+| `IDCardResult`  | `documentNumber`, `cnp`, `fullName`, `dateOfBirth`, `sex`, `dateOfIssue?`, `dateOfExpiry`, `issuingAuthority?`, `placeOfBirth?`, `citizenship?`, `permanentAddress?`, `temporaryAddress?`, `foreignAddress?`, `facialImage?`, `signatureImage?` |
+| `MRZScanResult` | Structured TD3 fields + `mrzKey` |
+| `OCRScanResult` | Text + per-field confidence + `isReliable` + `validationIssues` |
+| `CardSignatureResult` | `signature: Data`, `certificate: Data`, `hashAlgorithm: SigningHashAlgorithm` |
 
-### OCR/MRZ Scanning
-- Any device with camera
-- Good lighting conditions recommended
+All result types support `toJSON()` / `toJSONString()`.
 
-## Version History
+### Errors – `EIDError`
 
-### Version 1.4.0
-- ✅ Added MRZ scanner for passports
-- ✅ Improved OCR accuracy
-- ✅ Removed all debug logging
-- ✅ Performance optimizations
-- ✅ CSCA validation improvements
+```swift
+case licenseInvalid, licenseExpired, bundleIdMismatch, featureNotLicensed(_)
+case nfcNotAvailable, nfcSessionFailed(_), invalidMRZ, invalidCAN, invalidPIN,
+     invalidTag, readTimeout, connectionLost, userCancelled
+case cscaValidationFailed(_), signatureInvalid
+case signingPINIncorrect(remainingAttempts:), signingPINBlocked,
+     signingAppletNotFound, signingFailed(_),
+     signingCertificateUnavailable(_), invalidHashLength
+case readFailed(_), unexpectedError(_)
+```
 
-### Version 1.3.0
-- Added OCR scanning for old ID cards
-- Multi-pass OCR with confidence scoring
-- Vision framework integration
+`EIDError.localizedDescription` is fully localized via the bundled
+`Localizable.strings` (en + ro) and reacts to `EIDLocalization.setLanguage`.
 
-### Version 1.2.0
-- Added PACE support for Romanian passports
-- CSCA validation
-- Improved error handling
+## MRZ key & CAN reference
 
-### Version 1.0.0
-- Initial release
-- ID card NFC reading
-- Passport NFC reading
+```
+MRZ key  =  DocumentNumber<CD || DOB(YYMMDD)<CD || Expiry(YYMMDD)<CD
+Example  =  RO1234567<0850315301231
+```
 
-## Support
+CAN is the 6-digit number printed on the front of the eID card. The data
+PIN protects personal data reading; the signing PIN protects the qualified
+signing key (often different from the data PIN).
 
-For technical support, questions, or feature requests:
-- Email: [office@up2date.ro](mailto:office@up2date.ro)
-- Documentation: [https://docs.up2date.ro/eid-sdk](https://docs.up2date.ro/eid-sdk)
+## Best practices
+
+- **Initialize the license once** at app launch.
+- **Handle `EIDError.signingPINIncorrect`** carefully – the card locks
+  the signing key after 5 wrong attempts. The SDK probes the slot before
+  verifying, so a typo on your side won't burn an attempt, but a wrong
+  user input still does.
+- **Adjust `timeout`** when running with a metallic case or poor antenna.
+- **Use `EIDLocalization.languageDidChangeNotification`** to refresh any
+  cached SDK strings in your UI when the user toggles language.
+
+## Demo app
+
+`DemoApp/` ships a full SwiftUI sample that exercises every public
+surface: passport read, ID card read, MRZ scan, OCR, language picker,
+Keychain persistence, and a PAdES B-B / CAdES-detached signing flow with
+PDF picker and on-page placement.
+
+## Troubleshooting
+
+| Symptom | Likely cause |
+|---|---|
+| `nfcNotAvailable` | iOS simulator, or NFC entitlement / Info.plist key missing |
+| `invalidMRZ` | Wrong check digits in `mrzKey` |
+| `invalidCAN` | CAN must be 6 digits |
+| `invalidPIN` | Data PIN: 4–8 digits |
+| `signingAppletNotFound` | Card lacks the eSign sub-application or applet AID mismatch |
+| `signingPINBlocked` | 5 wrong signing PIN attempts; user must unblock via PUK |
+| `cscaValidationFailed` | Document signer chain doesn't match the bundled CSCA list |
+| `connectionLost` | Card moved during reading – keep it still |
 
 ## License
 
-Copyright © 2025 Up2Date Software. All rights reserved.
+Commercial. Contact `office@up2date.ro` for licensing.
 
-This SDK is proprietary software. Usage requires a valid license.
+Copyright © 2025-2026 Up2Date Software SRL. All rights reserved.

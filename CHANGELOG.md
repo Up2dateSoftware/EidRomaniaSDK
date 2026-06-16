@@ -5,6 +5,32 @@ All notable changes to the Romanian eID SDK will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.23] - 2026-06-16
+
+### iOS SDK
+
+#### Added
+- **Public `EIDLocalization` API** for runtime language switching:
+  `setLanguage(_:)`, `languageDidChangeNotification`, `currentLanguage`,
+  `availableLanguages`, `localizedString(forKey:)`. NFC alert messages,
+  progress callbacks and `EIDError.localizedDescription` all follow the
+  override immediately – no app restart required.
+
+#### Changed
+- Full sweep of internal Romanian-only strings through the `L10n` helper
+  across CSCAValidator, PassportBACReader, CompleteRomanianEIDReader,
+  the OCR / MRZ camera view controllers, the smart card reader and the
+  NFCPassportModel extensions. `Localizable.strings` expanded to ~85
+  keys (en + ro) covering NFC alerts, progress callbacks, signing flow,
+  validation issues, MRZ/OCR camera UI, data group names, finger
+  positions and status enums.
+- README rewritten to document the current public API surface
+  (`signHash`, `EIDLocalization`, MRZ/OCR camera flows, Keychain
+  persistence, full `EIDError` surface).
+- SDK version constant bumped to `1.4.23`.
+
+No breaking changes vs 1.4.22.
+
 ## [1.4.22] - 2026-06-16
 
 ### iOS SDK

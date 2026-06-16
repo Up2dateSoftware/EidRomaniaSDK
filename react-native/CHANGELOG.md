@@ -5,6 +5,16 @@ All notable changes to the Romanian eID SDK for React Native will be documented 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.23] - 2026-06-16
+
+### iOS
+
+- Refreshed bundled `RomanianEIDSDK.xcframework` to the 1.4.23 native
+  build. Native side adds the public `EIDLocalization` API and finishes
+  the i18n sweep so NFC alert messages, progress callbacks and
+  `EIDError.localizedDescription` follow the host app's selected
+  language at runtime.
+
 ## [1.4.22] - 2026-06-16
 
 ### iOS

@@ -23780,6 +23780,273 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "EIDLocalization",
+        "printedName": "EIDLocalization",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "languageDidChangeNotification",
+            "printedName": "languageDidChangeNotification",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Name",
+                "printedName": "Foundation.NSNotification.Name",
+                "usr": "c:@T@NSNotificationName"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14RomanianEIDSDK15EIDLocalizationO29languageDidChangeNotificationSo18NSNotificationNameavpZ",
+            "mangledName": "$s14RomanianEIDSDK15EIDLocalizationO29languageDidChangeNotificationSo18NSNotificationNameavpZ",
+            "moduleName": "RomanianEIDSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Name",
+                    "printedName": "Foundation.NSNotification.Name",
+                    "usr": "c:@T@NSNotificationName"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14RomanianEIDSDK15EIDLocalizationO29languageDidChangeNotificationSo18NSNotificationNameavgZ",
+                "mangledName": "$s14RomanianEIDSDK15EIDLocalizationO29languageDidChangeNotificationSo18NSNotificationNameavgZ",
+                "moduleName": "RomanianEIDSDK",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "currentLanguage",
+            "printedName": "currentLanguage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14RomanianEIDSDK15EIDLocalizationO15currentLanguageSSSgvpZ",
+            "mangledName": "$s14RomanianEIDSDK15EIDLocalizationO15currentLanguageSSSgvpZ",
+            "moduleName": "RomanianEIDSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14RomanianEIDSDK15EIDLocalizationO15currentLanguageSSSgvgZ",
+                "mangledName": "$s14RomanianEIDSDK15EIDLocalizationO15currentLanguageSSSgvgZ",
+                "moduleName": "RomanianEIDSDK",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setLanguage",
+            "printedName": "setLanguage(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14RomanianEIDSDK15EIDLocalizationO11setLanguageyySSSgFZ",
+            "mangledName": "$s14RomanianEIDSDK15EIDLocalizationO11setLanguageyySSSgFZ",
+            "moduleName": "RomanianEIDSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "availableLanguages",
+            "printedName": "availableLanguages",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14RomanianEIDSDK15EIDLocalizationO18availableLanguagesSaySSGvpZ",
+            "mangledName": "$s14RomanianEIDSDK15EIDLocalizationO18availableLanguagesSaySSGvpZ",
+            "moduleName": "RomanianEIDSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14RomanianEIDSDK15EIDLocalizationO18availableLanguagesSaySSGvgZ",
+                "mangledName": "$s14RomanianEIDSDK15EIDLocalizationO18availableLanguagesSaySSGvgZ",
+                "moduleName": "RomanianEIDSDK",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "localizedString",
+            "printedName": "localizedString(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14RomanianEIDSDK15EIDLocalizationO15localizedString6forKeyS2S_tFZ",
+            "mangledName": "$s14RomanianEIDSDK15EIDLocalizationO15localizedString6forKeyS2S_tFZ",
+            "moduleName": "RomanianEIDSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:14RomanianEIDSDK15EIDLocalizationO",
+        "mangledName": "$s14RomanianEIDSDK15EIDLocalizationO",
+        "moduleName": "RomanianEIDSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RomanianEIDSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
@@ -34870,28 +35137,28 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/xcriss\/Library\/Developer\/Xcode\/DerivedData\/eidromania-ios-sdk-erqcktxaiwqnanbfetobdjalxxya\/Build\/Intermediates.noindex\/ArchiveIntermediates\/RomanianEIDSDK\/IntermediateBuildFilesPath\/RomanianEIDSDK.build\/Release-iphoneos\/RomanianEIDSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/Users\/xcriss\/Library\/Developer\/Xcode\/DerivedData\/EIDRomania-fekwevyrjdjeqgctoyvbmgsybsie\/Build\/Intermediates.noindex\/ArchiveIntermediates\/RomanianEIDSDK\/IntermediateBuildFilesPath\/RomanianEIDSDK.build\/Release-iphoneos\/RomanianEIDSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "StringLiteral",
       "offset": 307,
       "length": 31,
       "value": "\"RomanianEIDSDK_RomanianEIDSDK\""
     },
     {
-      "filePath": "\/Users\/xcriss\/Library\/Developer\/Xcode\/DerivedData\/eidromania-ios-sdk-erqcktxaiwqnanbfetobdjalxxya\/Build\/Intermediates.noindex\/ArchiveIntermediates\/RomanianEIDSDK\/IntermediateBuildFilesPath\/RomanianEIDSDK.build\/Release-iphoneos\/RomanianEIDSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/Users\/xcriss\/Library\/Developer\/Xcode\/DerivedData\/EIDRomania-fekwevyrjdjeqgctoyvbmgsybsie\/Build\/Intermediates.noindex\/ArchiveIntermediates\/RomanianEIDSDK\/IntermediateBuildFilesPath\/RomanianEIDSDK.build\/Release-iphoneos\/RomanianEIDSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "Array",
       "offset": 985,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/xcriss\/Library\/Developer\/Xcode\/DerivedData\/eidromania-ios-sdk-erqcktxaiwqnanbfetobdjalxxya\/Build\/Intermediates.noindex\/ArchiveIntermediates\/RomanianEIDSDK\/IntermediateBuildFilesPath\/RomanianEIDSDK.build\/Release-iphoneos\/RomanianEIDSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/Users\/xcriss\/Library\/Developer\/Xcode\/DerivedData\/EIDRomania-fekwevyrjdjeqgctoyvbmgsybsie\/Build\/Intermediates.noindex\/ArchiveIntermediates\/RomanianEIDSDK\/IntermediateBuildFilesPath\/RomanianEIDSDK.build\/Release-iphoneos\/RomanianEIDSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "StringLiteral",
       "offset": 1512,
       "length": 9,
       "value": "\".bundle\""
     },
     {
-      "filePath": "\/Users\/xcriss\/Library\/Developer\/Xcode\/DerivedData\/eidromania-ios-sdk-erqcktxaiwqnanbfetobdjalxxya\/Build\/Intermediates.noindex\/ArchiveIntermediates\/RomanianEIDSDK\/IntermediateBuildFilesPath\/RomanianEIDSDK.build\/Release-iphoneos\/RomanianEIDSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "filePath": "\/Users\/xcriss\/Library\/Developer\/Xcode\/DerivedData\/EIDRomania-fekwevyrjdjeqgctoyvbmgsybsie\/Build\/Intermediates.noindex\/ArchiveIntermediates\/RomanianEIDSDK\/IntermediateBuildFilesPath\/RomanianEIDSDK.build\/Release-iphoneos\/RomanianEIDSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
       "kind": "StringLiteral",
       "offset": 1664,
       "length": 59,
@@ -35110,161 +35377,161 @@
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 6295,
+      "offset": 6459,
       "length": 15,
       "value": "\"NOT_SUPPORTED\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 6332,
+      "offset": 6496,
       "length": 11,
       "value": "\"SUCCEEDED\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 6362,
+      "offset": 6526,
       "length": 8,
       "value": "\"FAILED\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 6624,
+      "offset": 6851,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 6657,
+      "offset": 6884,
       "length": 14,
       "value": "\"NOT_VERIFIED\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 6692,
+      "offset": 6919,
       "length": 10,
       "value": "\"VERIFIED\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 6722,
+      "offset": 6949,
       "length": 9,
       "value": "\"BLOCKED\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7032,
+      "offset": 7337,
       "length": 5,
       "value": "\"DG1\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7071,
+      "offset": 7376,
       "length": 5,
       "value": "\"DG2\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7109,
+      "offset": 7414,
       "length": 5,
       "value": "\"DG3\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7147,
+      "offset": 7452,
       "length": 5,
       "value": "\"DG4\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7204,
+      "offset": 7509,
       "length": 5,
       "value": "\"DG5\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7238,
+      "offset": 7543,
       "length": 5,
       "value": "\"DG6\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7272,
+      "offset": 7577,
       "length": 5,
       "value": "\"DG7\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7307,
+      "offset": 7612,
       "length": 5,
       "value": "\"DG8\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7346,
+      "offset": 7651,
       "length": 5,
       "value": "\"DG9\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7391,
+      "offset": 7696,
       "length": 6,
       "value": "\"DG10\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7436,
+      "offset": 7741,
       "length": 6,
       "value": "\"DG11\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7490,
+      "offset": 7795,
       "length": 6,
       "value": "\"DG12\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7544,
+      "offset": 7849,
       "length": 6,
       "value": "\"DG13\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7587,
+      "offset": 7892,
       "length": 6,
       "value": "\"DG14\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7630,
+      "offset": 7935,
       "length": 6,
       "value": "\"DG15\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7689,
+      "offset": 7994,
       "length": 6,
       "value": "\"DG16\""
     },
@@ -37665,7 +37932,7 @@
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 6581,
+      "offset": 6589,
       "length": 2,
       "value": "[]"
     },
@@ -37700,7 +37967,7 @@
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/PassportBACReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 7409,
+      "offset": 7272,
       "length": 5,
       "value": "false"
     },
@@ -37815,6 +38082,20 @@
       "offset": 7635,
       "length": 3,
       "value": "200"
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Utils\/L10n.swift",
+      "kind": "StringLiteral",
+      "offset": 2248,
+      "length": 34,
+      "value": "\"EIDLocalizationLanguageDidChange\""
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Utils\/L10n.swift",
+      "kind": "StringLiteral",
+      "offset": 2330,
+      "length": 36,
+      "value": "\"ro.up2date.eidromania.localization\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Utils\/OpenSSLUtils.swift",
@@ -38240,13 +38521,13 @@
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/RomanianEIDSDK+Public.swift",
       "kind": "StringLiteral",
       "offset": 1666,
-      "length": 7,
-      "value": "\"1.0.0\""
+      "length": 8,
+      "value": "\"1.4.23\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/RomanianEIDSDK+Public.swift",
       "kind": "Array",
-      "offset": 2465,
+      "offset": 2466,
       "length": 380,
       "value": "[\"A0000002471001\", \"A000000077030C60000000FE00000500\", \"E828BD080FA000000167454441544100\", \"A000000077010800070000FE00000100\"]"
     },

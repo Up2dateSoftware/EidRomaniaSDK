@@ -9,6 +9,27 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "RomanianEIDSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RomanianEIDSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RomanianEIDSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "RomanianEIDSDK",
         "declAttributes": [
           "RawDocComment"
@@ -3041,17 +3062,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -7305,17 +7326,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -7731,17 +7752,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -10454,6 +10475,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -10461,17 +10489,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Error",
             "printedName": "Error",
             "usr": "s:s5ErrorP",
             "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -10486,13 +10514,6 @@
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "LocalizedError",
-            "printedName": "LocalizedError",
-            "usr": "s:10Foundation14LocalizedErrorP",
-            "mangledName": "$s10Foundation14LocalizedErrorP"
           }
         ]
       },
@@ -10975,6 +10996,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -10982,17 +11010,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Error",
             "printedName": "Error",
             "usr": "s:s5ErrorP",
             "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -11007,13 +11035,6 @@
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "LocalizedError",
-            "printedName": "LocalizedError",
-            "usr": "s:10Foundation14LocalizedErrorP",
-            "mangledName": "$s10Foundation14LocalizedErrorP"
           }
         ]
       },
@@ -11242,6 +11263,13 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
@@ -11249,17 +11277,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Error",
             "printedName": "Error",
             "usr": "s:s5ErrorP",
             "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -11274,13 +11302,6 @@
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "LocalizedError",
-            "printedName": "LocalizedError",
-            "usr": "s:10Foundation14LocalizedErrorP",
-            "mangledName": "$s10Foundation14LocalizedErrorP"
           }
         ]
       },
@@ -11728,17 +11749,17 @@
               },
               {
                 "kind": "Conformance",
-                "name": "Escapable",
-                "printedName": "Escapable",
-                "usr": "s:s9EscapableP",
-                "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
                 "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
               },
               {
                 "kind": "Conformance",
@@ -12237,17 +12258,17 @@
               },
               {
                 "kind": "Conformance",
-                "name": "Escapable",
-                "printedName": "Escapable",
-                "usr": "s:s9EscapableP",
-                "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
                 "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
               },
               {
                 "kind": "Conformance",
@@ -12524,17 +12545,17 @@
               },
               {
                 "kind": "Conformance",
-                "name": "Escapable",
-                "printedName": "Escapable",
-                "usr": "s:s9EscapableP",
-                "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
                 "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
               },
               {
                 "kind": "Conformance",
@@ -13107,17 +13128,17 @@
               },
               {
                 "kind": "Conformance",
-                "name": "Escapable",
-                "printedName": "Escapable",
-                "usr": "s:s9EscapableP",
-                "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
                 "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
               },
               {
                 "kind": "Conformance",
@@ -13690,17 +13711,17 @@
               },
               {
                 "kind": "Conformance",
-                "name": "Escapable",
-                "printedName": "Escapable",
-                "usr": "s:s9EscapableP",
-                "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
                 "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
               },
               {
                 "kind": "Conformance",
@@ -14051,17 +14072,17 @@
               },
               {
                 "kind": "Conformance",
-                "name": "Escapable",
-                "printedName": "Escapable",
-                "usr": "s:s9EscapableP",
-                "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
                 "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
               },
               {
                 "kind": "Conformance",
@@ -14301,17 +14322,17 @@
               },
               {
                 "kind": "Conformance",
-                "name": "Escapable",
-                "printedName": "Escapable",
-                "usr": "s:s9EscapableP",
-                "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
                 "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
               },
               {
                 "kind": "Conformance",
@@ -14773,17 +14794,17 @@
               },
               {
                 "kind": "Conformance",
-                "name": "Escapable",
-                "printedName": "Escapable",
-                "usr": "s:s9EscapableP",
-                "mangledName": "$ss9EscapableP"
-              },
-              {
-                "kind": "Conformance",
                 "name": "Equatable",
                 "printedName": "Equatable",
                 "usr": "s:SQ",
                 "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
               },
               {
                 "kind": "Conformance",
@@ -14867,17 +14888,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -15214,17 +15235,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -18231,17 +18252,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -19160,45 +19181,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+            "name": "NFCTagReaderSessionDelegate",
+            "printedName": "NFCTagReaderSessionDelegate",
+            "usr": "s:7CoreNFC27NFCTagReaderSessionDelegateP",
+            "mangledName": "$s7CoreNFC27NFCTagReaderSessionDelegateP"
           },
           {
             "kind": "Conformance",
@@ -19209,10 +19195,24 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
@@ -19223,10 +19223,31 @@
           },
           {
             "kind": "Conformance",
-            "name": "NFCTagReaderSessionDelegate",
-            "printedName": "NFCTagReaderSessionDelegate",
-            "usr": "s:7CoreNFC27NFCTagReaderSessionDelegateP",
-            "mangledName": "$s7CoreNFC27NFCTagReaderSessionDelegateP"
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
           }
         ]
       },
@@ -19810,17 +19831,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -20294,17 +20315,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "CustomDebugStringConvertible",
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -22104,17 +22125,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -22521,17 +22542,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -23150,6 +23171,26 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RomanianEIDSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RomanianEIDSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Security",
         "printedName": "Security",
         "declKind": "Import",
@@ -23185,6 +23226,16 @@
         "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "RomanianEIDSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RomanianEIDSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -23729,6 +23780,273 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "EIDLocalization",
+        "printedName": "EIDLocalization",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "languageDidChangeNotification",
+            "printedName": "languageDidChangeNotification",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Name",
+                "printedName": "Foundation.NSNotification.Name",
+                "usr": "c:@T@NSNotificationName"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14RomanianEIDSDK15EIDLocalizationO29languageDidChangeNotificationSo18NSNotificationNameavpZ",
+            "mangledName": "$s14RomanianEIDSDK15EIDLocalizationO29languageDidChangeNotificationSo18NSNotificationNameavpZ",
+            "moduleName": "RomanianEIDSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Name",
+                    "printedName": "Foundation.NSNotification.Name",
+                    "usr": "c:@T@NSNotificationName"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14RomanianEIDSDK15EIDLocalizationO29languageDidChangeNotificationSo18NSNotificationNameavgZ",
+                "mangledName": "$s14RomanianEIDSDK15EIDLocalizationO29languageDidChangeNotificationSo18NSNotificationNameavgZ",
+                "moduleName": "RomanianEIDSDK",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "currentLanguage",
+            "printedName": "currentLanguage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14RomanianEIDSDK15EIDLocalizationO15currentLanguageSSSgvpZ",
+            "mangledName": "$s14RomanianEIDSDK15EIDLocalizationO15currentLanguageSSSgvpZ",
+            "moduleName": "RomanianEIDSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14RomanianEIDSDK15EIDLocalizationO15currentLanguageSSSgvgZ",
+                "mangledName": "$s14RomanianEIDSDK15EIDLocalizationO15currentLanguageSSSgvgZ",
+                "moduleName": "RomanianEIDSDK",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setLanguage",
+            "printedName": "setLanguage(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14RomanianEIDSDK15EIDLocalizationO11setLanguageyySSSgFZ",
+            "mangledName": "$s14RomanianEIDSDK15EIDLocalizationO11setLanguageyySSSgFZ",
+            "moduleName": "RomanianEIDSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "availableLanguages",
+            "printedName": "availableLanguages",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14RomanianEIDSDK15EIDLocalizationO18availableLanguagesSaySSGvpZ",
+            "mangledName": "$s14RomanianEIDSDK15EIDLocalizationO18availableLanguagesSaySSGvpZ",
+            "moduleName": "RomanianEIDSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14RomanianEIDSDK15EIDLocalizationO18availableLanguagesSaySSGvgZ",
+                "mangledName": "$s14RomanianEIDSDK15EIDLocalizationO18availableLanguagesSaySSGvgZ",
+                "moduleName": "RomanianEIDSDK",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "localizedString",
+            "printedName": "localizedString(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14RomanianEIDSDK15EIDLocalizationO15localizedString6forKeyS2S_tFZ",
+            "mangledName": "$s14RomanianEIDSDK15EIDLocalizationO15localizedString6forKeyS2S_tFZ",
+            "moduleName": "RomanianEIDSDK",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:14RomanianEIDSDK15EIDLocalizationO",
+        "mangledName": "$s14RomanianEIDSDK15EIDLocalizationO",
+        "moduleName": "RomanianEIDSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RomanianEIDSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
@@ -23959,6 +24277,67 @@
                 "declKind": "Accessor",
                 "usr": "s:14RomanianEIDSDK14PassportResultV11nationalitySSvg",
                 "mangledName": "$s14RomanianEIDSDK14PassportResultV11nationalitySSvg",
+                "moduleName": "RomanianEIDSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "issuingCountry",
+            "printedName": "issuingCountry",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14RomanianEIDSDK14PassportResultV14issuingCountrySSSgvp",
+            "mangledName": "$s14RomanianEIDSDK14PassportResultV14issuingCountrySSSgvp",
+            "moduleName": "RomanianEIDSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14RomanianEIDSDK14PassportResultV14issuingCountrySSSgvg",
+                "mangledName": "$s14RomanianEIDSDK14PassportResultV14issuingCountrySSSgvg",
                 "moduleName": "RomanianEIDSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -24652,7 +25031,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(success:documentNumber:fullName:dateOfBirth:nationality:sex:dateOfExpiry:cnp:placeOfBirth:residenceAddress:phoneNumber:facialImage:signatureImage:cscaValidated:cscaCountry:cscaValidationMessage:errorMessage:)",
+            "printedName": "init(success:documentNumber:fullName:dateOfBirth:nationality:issuingCountry:sex:dateOfExpiry:cnp:placeOfBirth:residenceAddress:phoneNumber:facialImage:signatureImage:cscaValidated:cscaCountry:cscaValidationMessage:errorMessage:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -24693,6 +25072,21 @@
                 "printedName": "Swift.String",
                 "hasDefaultArg": true,
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -24852,8 +25246,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14RomanianEIDSDK14PassportResultV7success14documentNumber8fullName11dateOfBirth11nationality3sex0jK6Expiry3cnp05placekL016residenceAddress05phoneG011facialImage09signatureV013cscaValidated0X7Country0X17ValidationMessage12errorMessageACSb_S7SSgA3USo7UIImageCSgAXSbA3Utcfc",
-            "mangledName": "$s14RomanianEIDSDK14PassportResultV7success14documentNumber8fullName11dateOfBirth11nationality3sex0jK6Expiry3cnp05placekL016residenceAddress05phoneG011facialImage09signatureV013cscaValidated0X7Country0X17ValidationMessage12errorMessageACSb_S7SSgA3USo7UIImageCSgAXSbA3Utcfc",
+            "usr": "s:14RomanianEIDSDK14PassportResultV7success14documentNumber8fullName11dateOfBirth11nationality14issuingCountry3sex0jK6Expiry3cnp05placekL016residenceAddress05phoneG011facialImage09signatureX013cscaValidated0zO00Z17ValidationMessage12errorMessageACSb_S5SSgS2SA4VSo7UIImageCSgAYSbA3Vtcfc",
+            "mangledName": "$s14RomanianEIDSDK14PassportResultV7success14documentNumber8fullName11dateOfBirth11nationality14issuingCountry3sex0jK6Expiry3cnp05placekL016residenceAddress05phoneG011facialImage09signatureX013cscaValidated0zO00Z17ValidationMessage12errorMessageACSb_S5SSgS2SA4VSo7UIImageCSgAYSbA3Vtcfc",
             "moduleName": "RomanianEIDSDK",
             "declAttributes": [
               "AccessControl"
@@ -25241,6 +25635,67 @@
                 "declKind": "Accessor",
                 "usr": "s:14RomanianEIDSDK12IDCardResultV3sexSSvg",
                 "mangledName": "$s14RomanianEIDSDK12IDCardResultV3sexSSvg",
+                "moduleName": "RomanianEIDSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "dateOfIssue",
+            "printedName": "dateOfIssue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14RomanianEIDSDK12IDCardResultV11dateOfIssueSSSgvp",
+            "mangledName": "$s14RomanianEIDSDK12IDCardResultV11dateOfIssueSSSgvp",
+            "moduleName": "RomanianEIDSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14RomanianEIDSDK12IDCardResultV11dateOfIssueSSSgvg",
+                "mangledName": "$s14RomanianEIDSDK12IDCardResultV11dateOfIssueSSSgvg",
                 "moduleName": "RomanianEIDSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -26011,7 +26466,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(success:documentNumber:cnp:fullName:dateOfBirth:sex:dateOfExpiry:issuingAuthority:placeOfBirth:citizenship:permanentAddress:temporaryAddress:foreignAddress:facialImage:signatureImage:cscaValidated:cscaCountry:cscaValidationMessage:errorMessage:)",
+            "printedName": "init(success:documentNumber:cnp:fullName:dateOfBirth:sex:dateOfIssue:dateOfExpiry:issuingAuthority:placeOfBirth:citizenship:permanentAddress:temporaryAddress:foreignAddress:facialImage:signatureImage:cscaValidated:cscaCountry:cscaValidationMessage:errorMessage:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -26059,6 +26514,21 @@
                 "printedName": "Swift.String",
                 "hasDefaultArg": true,
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -26241,8 +26711,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14RomanianEIDSDK12IDCardResultV7success14documentNumber3cnp8fullName11dateOfBirth3sex0kL6Expiry16issuingAuthority05placelM011citizenship16permanentAddress09temporaryU007foreignU011facialImage09signatureY013cscaValidated11cscaCountry21cscaValidationMessage12errorMessageACSb_S7SSgA5WSo7UIImageCSgAZSbA3Wtcfc",
-            "mangledName": "$s14RomanianEIDSDK12IDCardResultV7success14documentNumber3cnp8fullName11dateOfBirth3sex0kL6Expiry16issuingAuthority05placelM011citizenship16permanentAddress09temporaryU007foreignU011facialImage09signatureY013cscaValidated11cscaCountry21cscaValidationMessage12errorMessageACSb_S7SSgA5WSo7UIImageCSgAZSbA3Wtcfc",
+            "usr": "s:14RomanianEIDSDK12IDCardResultV7success14documentNumber3cnp8fullName11dateOfBirth3sex0kL5Issue0kL6Expiry16issuingAuthority05placelM011citizenship16permanentAddress09temporaryV007foreignV011facialImage09signatureZ013cscaValidated11cscaCountry21cscaValidationMessage12errorMessageACSb_S6SSgSSA6XSo7UIImageCSgA_SbA3Xtcfc",
+            "mangledName": "$s14RomanianEIDSDK12IDCardResultV7success14documentNumber3cnp8fullName11dateOfBirth3sex0kL5Issue0kL6Expiry16issuingAuthority05placelM011citizenship16permanentAddress09temporaryV007foreignV011facialImage09signatureZ013cscaValidated11cscaCountry21cscaValidationMessage12errorMessageACSb_S6SSgSSA6XSo7UIImageCSgA_SbA3Xtcfc",
             "moduleName": "RomanianEIDSDK",
             "declAttributes": [
               "AccessControl"
@@ -30813,6 +31283,43 @@
             "moduleName": "RomanianEIDSDK"
           },
           {
+            "kind": "Var",
+            "name": "documentSigning",
+            "printedName": "documentSigning",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RomanianEIDSDK.LicenseFeature.Type) -> RomanianEIDSDK.LicenseFeature",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LicenseFeature",
+                    "printedName": "RomanianEIDSDK.LicenseFeature",
+                    "usr": "s:14RomanianEIDSDK14LicenseFeatureO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "RomanianEIDSDK.LicenseFeature.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LicenseFeature",
+                        "printedName": "RomanianEIDSDK.LicenseFeature",
+                        "usr": "s:14RomanianEIDSDK14LicenseFeatureO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14RomanianEIDSDK14LicenseFeatureO15documentSigningyA2CmF",
+            "mangledName": "$s14RomanianEIDSDK14LicenseFeatureO15documentSigningyA2CmF",
+            "moduleName": "RomanianEIDSDK"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(rawValue:)",
@@ -30971,13 +31478,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
@@ -31048,6 +31548,13 @@
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           }
         ]
       },
@@ -31370,17 +31877,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -31709,17 +32216,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -32376,6 +32883,277 @@
           },
           {
             "kind": "Var",
+            "name": "signingPINIncorrect",
+            "printedName": "signingPINIncorrect",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RomanianEIDSDK.EIDError.Type) -> (Swift.Int) -> RomanianEIDSDK.EIDError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> RomanianEIDSDK.EIDError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EIDError",
+                        "printedName": "RomanianEIDSDK.EIDError",
+                        "usr": "s:14RomanianEIDSDK8EIDErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(remainingAttempts: Swift.Int)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "RomanianEIDSDK.EIDError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EIDError",
+                        "printedName": "RomanianEIDSDK.EIDError",
+                        "usr": "s:14RomanianEIDSDK8EIDErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14RomanianEIDSDK8EIDErrorO19signingPINIncorrectyACSi_tcACmF",
+            "mangledName": "$s14RomanianEIDSDK8EIDErrorO19signingPINIncorrectyACSi_tcACmF",
+            "moduleName": "RomanianEIDSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "signingPINBlocked",
+            "printedName": "signingPINBlocked",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RomanianEIDSDK.EIDError.Type) -> RomanianEIDSDK.EIDError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EIDError",
+                    "printedName": "RomanianEIDSDK.EIDError",
+                    "usr": "s:14RomanianEIDSDK8EIDErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "RomanianEIDSDK.EIDError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EIDError",
+                        "printedName": "RomanianEIDSDK.EIDError",
+                        "usr": "s:14RomanianEIDSDK8EIDErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14RomanianEIDSDK8EIDErrorO17signingPINBlockedyA2CmF",
+            "mangledName": "$s14RomanianEIDSDK8EIDErrorO17signingPINBlockedyA2CmF",
+            "moduleName": "RomanianEIDSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "signingAppletNotFound",
+            "printedName": "signingAppletNotFound",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RomanianEIDSDK.EIDError.Type) -> RomanianEIDSDK.EIDError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EIDError",
+                    "printedName": "RomanianEIDSDK.EIDError",
+                    "usr": "s:14RomanianEIDSDK8EIDErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "RomanianEIDSDK.EIDError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EIDError",
+                        "printedName": "RomanianEIDSDK.EIDError",
+                        "usr": "s:14RomanianEIDSDK8EIDErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14RomanianEIDSDK8EIDErrorO21signingAppletNotFoundyA2CmF",
+            "mangledName": "$s14RomanianEIDSDK8EIDErrorO21signingAppletNotFoundyA2CmF",
+            "moduleName": "RomanianEIDSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "signingFailed",
+            "printedName": "signingFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RomanianEIDSDK.EIDError.Type) -> (Swift.String) -> RomanianEIDSDK.EIDError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> RomanianEIDSDK.EIDError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EIDError",
+                        "printedName": "RomanianEIDSDK.EIDError",
+                        "usr": "s:14RomanianEIDSDK8EIDErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "RomanianEIDSDK.EIDError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EIDError",
+                        "printedName": "RomanianEIDSDK.EIDError",
+                        "usr": "s:14RomanianEIDSDK8EIDErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14RomanianEIDSDK8EIDErrorO13signingFailedyACSScACmF",
+            "mangledName": "$s14RomanianEIDSDK8EIDErrorO13signingFailedyACSScACmF",
+            "moduleName": "RomanianEIDSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "signingCertificateUnavailable",
+            "printedName": "signingCertificateUnavailable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RomanianEIDSDK.EIDError.Type) -> (Swift.String) -> RomanianEIDSDK.EIDError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> RomanianEIDSDK.EIDError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EIDError",
+                        "printedName": "RomanianEIDSDK.EIDError",
+                        "usr": "s:14RomanianEIDSDK8EIDErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "RomanianEIDSDK.EIDError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EIDError",
+                        "printedName": "RomanianEIDSDK.EIDError",
+                        "usr": "s:14RomanianEIDSDK8EIDErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14RomanianEIDSDK8EIDErrorO29signingCertificateUnavailableyACSScACmF",
+            "mangledName": "$s14RomanianEIDSDK8EIDErrorO29signingCertificateUnavailableyACSScACmF",
+            "moduleName": "RomanianEIDSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidHashLength",
+            "printedName": "invalidHashLength",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RomanianEIDSDK.EIDError.Type) -> RomanianEIDSDK.EIDError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EIDError",
+                    "printedName": "RomanianEIDSDK.EIDError",
+                    "usr": "s:14RomanianEIDSDK8EIDErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "RomanianEIDSDK.EIDError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EIDError",
+                        "printedName": "RomanianEIDSDK.EIDError",
+                        "usr": "s:14RomanianEIDSDK8EIDErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14RomanianEIDSDK8EIDErrorO17invalidHashLengthyA2CmF",
+            "mangledName": "$s14RomanianEIDSDK8EIDErrorO17invalidHashLengthyA2CmF",
+            "moduleName": "RomanianEIDSDK"
+          },
+          {
+            "kind": "Var",
             "name": "readFailed",
             "printedName": "readFailed",
             "children": [
@@ -32552,13 +33330,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Error",
             "printedName": "Error",
             "usr": "s:s5ErrorP",
@@ -32570,6 +33341,807 @@
             "printedName": "LocalizedError",
             "usr": "s:10Foundation14LocalizedErrorP",
             "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SigningHashAlgorithm",
+        "printedName": "SigningHashAlgorithm",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sha256",
+            "printedName": "sha256",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RomanianEIDSDK.SigningHashAlgorithm.Type) -> RomanianEIDSDK.SigningHashAlgorithm",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SigningHashAlgorithm",
+                    "printedName": "RomanianEIDSDK.SigningHashAlgorithm",
+                    "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "RomanianEIDSDK.SigningHashAlgorithm.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SigningHashAlgorithm",
+                        "printedName": "RomanianEIDSDK.SigningHashAlgorithm",
+                        "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO6sha256yA2CmF",
+            "mangledName": "$s14RomanianEIDSDK20SigningHashAlgorithmO6sha256yA2CmF",
+            "moduleName": "RomanianEIDSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "sha384",
+            "printedName": "sha384",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RomanianEIDSDK.SigningHashAlgorithm.Type) -> RomanianEIDSDK.SigningHashAlgorithm",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SigningHashAlgorithm",
+                    "printedName": "RomanianEIDSDK.SigningHashAlgorithm",
+                    "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "RomanianEIDSDK.SigningHashAlgorithm.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SigningHashAlgorithm",
+                        "printedName": "RomanianEIDSDK.SigningHashAlgorithm",
+                        "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO6sha384yA2CmF",
+            "mangledName": "$s14RomanianEIDSDK20SigningHashAlgorithmO6sha384yA2CmF",
+            "moduleName": "RomanianEIDSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "sha512",
+            "printedName": "sha512",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RomanianEIDSDK.SigningHashAlgorithm.Type) -> RomanianEIDSDK.SigningHashAlgorithm",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SigningHashAlgorithm",
+                    "printedName": "RomanianEIDSDK.SigningHashAlgorithm",
+                    "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "RomanianEIDSDK.SigningHashAlgorithm.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SigningHashAlgorithm",
+                        "printedName": "RomanianEIDSDK.SigningHashAlgorithm",
+                        "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO6sha512yA2CmF",
+            "mangledName": "$s14RomanianEIDSDK20SigningHashAlgorithmO6sha512yA2CmF",
+            "moduleName": "RomanianEIDSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "hashLength",
+            "printedName": "hashLength",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO10hashLengthSivp",
+            "mangledName": "$s14RomanianEIDSDK20SigningHashAlgorithmO10hashLengthSivp",
+            "moduleName": "RomanianEIDSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO10hashLengthSivg",
+                "mangledName": "$s14RomanianEIDSDK20SigningHashAlgorithmO10hashLengthSivg",
+                "moduleName": "RomanianEIDSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "RomanianEIDSDK.SigningHashAlgorithm?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SigningHashAlgorithm",
+                    "printedName": "RomanianEIDSDK.SigningHashAlgorithm",
+                    "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO8rawValueACSgSS_tcfc",
+            "mangledName": "$s14RomanianEIDSDK20SigningHashAlgorithmO8rawValueACSgSS_tcfc",
+            "moduleName": "RomanianEIDSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO8rawValueSSvp",
+            "mangledName": "$s14RomanianEIDSDK20SigningHashAlgorithmO8rawValueSSvp",
+            "moduleName": "RomanianEIDSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO8rawValueSSvg",
+                "mangledName": "$s14RomanianEIDSDK20SigningHashAlgorithmO8rawValueSSvg",
+                "moduleName": "RomanianEIDSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO",
+        "mangledName": "$s14RomanianEIDSDK20SigningHashAlgorithmO",
+        "moduleName": "RomanianEIDSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SigningOptions",
+        "printedName": "SigningOptions",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "hashAlgorithm",
+            "printedName": "hashAlgorithm",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SigningHashAlgorithm",
+                "printedName": "RomanianEIDSDK.SigningHashAlgorithm",
+                "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14RomanianEIDSDK14SigningOptionsV13hashAlgorithmAA0c4HashF0Ovp",
+            "mangledName": "$s14RomanianEIDSDK14SigningOptionsV13hashAlgorithmAA0c4HashF0Ovp",
+            "moduleName": "RomanianEIDSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SigningHashAlgorithm",
+                    "printedName": "RomanianEIDSDK.SigningHashAlgorithm",
+                    "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14RomanianEIDSDK14SigningOptionsV13hashAlgorithmAA0c4HashF0Ovg",
+                "mangledName": "$s14RomanianEIDSDK14SigningOptionsV13hashAlgorithmAA0c4HashF0Ovg",
+                "moduleName": "RomanianEIDSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timeout",
+            "printedName": "timeout",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14RomanianEIDSDK14SigningOptionsV7timeoutSdvp",
+            "mangledName": "$s14RomanianEIDSDK14SigningOptionsV7timeoutSdvp",
+            "moduleName": "RomanianEIDSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14RomanianEIDSDK14SigningOptionsV7timeoutSdvg",
+                "mangledName": "$s14RomanianEIDSDK14SigningOptionsV7timeoutSdvg",
+                "moduleName": "RomanianEIDSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "logLevel",
+            "printedName": "logLevel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "RomanianEIDSDK.LogLevel",
+                "usr": "s:14RomanianEIDSDK8LogLevelO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14RomanianEIDSDK14SigningOptionsV8logLevelAA03LogF0Ovp",
+            "mangledName": "$s14RomanianEIDSDK14SigningOptionsV8logLevelAA03LogF0Ovp",
+            "moduleName": "RomanianEIDSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LogLevel",
+                    "printedName": "RomanianEIDSDK.LogLevel",
+                    "usr": "s:14RomanianEIDSDK8LogLevelO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14RomanianEIDSDK14SigningOptionsV8logLevelAA03LogF0Ovg",
+                "mangledName": "$s14RomanianEIDSDK14SigningOptionsV8logLevelAA03LogF0Ovg",
+                "moduleName": "RomanianEIDSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "default",
+            "printedName": "default",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SigningOptions",
+                "printedName": "RomanianEIDSDK.SigningOptions",
+                "usr": "s:14RomanianEIDSDK14SigningOptionsV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14RomanianEIDSDK14SigningOptionsV7defaultACvpZ",
+            "mangledName": "$s14RomanianEIDSDK14SigningOptionsV7defaultACvpZ",
+            "moduleName": "RomanianEIDSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SigningOptions",
+                    "printedName": "RomanianEIDSDK.SigningOptions",
+                    "usr": "s:14RomanianEIDSDK14SigningOptionsV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14RomanianEIDSDK14SigningOptionsV7defaultACvgZ",
+                "mangledName": "$s14RomanianEIDSDK14SigningOptionsV7defaultACvgZ",
+                "moduleName": "RomanianEIDSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(hashAlgorithm:timeout:logLevel:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SigningOptions",
+                "printedName": "RomanianEIDSDK.SigningOptions",
+                "usr": "s:14RomanianEIDSDK14SigningOptionsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SigningHashAlgorithm",
+                "printedName": "RomanianEIDSDK.SigningHashAlgorithm",
+                "hasDefaultArg": true,
+                "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LogLevel",
+                "printedName": "RomanianEIDSDK.LogLevel",
+                "hasDefaultArg": true,
+                "usr": "s:14RomanianEIDSDK8LogLevelO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14RomanianEIDSDK14SigningOptionsV13hashAlgorithm7timeout8logLevelAcA0c4HashF0O_SdAA03LogI0Otcfc",
+            "mangledName": "$s14RomanianEIDSDK14SigningOptionsV13hashAlgorithm7timeout8logLevelAcA0c4HashF0O_SdAA03LogI0Otcfc",
+            "moduleName": "RomanianEIDSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14RomanianEIDSDK14SigningOptionsV",
+        "mangledName": "$s14RomanianEIDSDK14SigningOptionsV",
+        "moduleName": "RomanianEIDSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CardSignatureResult",
+        "printedName": "CardSignatureResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "signature",
+            "printedName": "signature",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14RomanianEIDSDK19CardSignatureResultV9signature10Foundation4DataVvp",
+            "mangledName": "$s14RomanianEIDSDK19CardSignatureResultV9signature10Foundation4DataVvp",
+            "moduleName": "RomanianEIDSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14RomanianEIDSDK19CardSignatureResultV9signature10Foundation4DataVvg",
+                "mangledName": "$s14RomanianEIDSDK19CardSignatureResultV9signature10Foundation4DataVvg",
+                "moduleName": "RomanianEIDSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "certificate",
+            "printedName": "certificate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14RomanianEIDSDK19CardSignatureResultV11certificate10Foundation4DataVvp",
+            "mangledName": "$s14RomanianEIDSDK19CardSignatureResultV11certificate10Foundation4DataVvp",
+            "moduleName": "RomanianEIDSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14RomanianEIDSDK19CardSignatureResultV11certificate10Foundation4DataVvg",
+                "mangledName": "$s14RomanianEIDSDK19CardSignatureResultV11certificate10Foundation4DataVvg",
+                "moduleName": "RomanianEIDSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hashAlgorithm",
+            "printedName": "hashAlgorithm",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SigningHashAlgorithm",
+                "printedName": "RomanianEIDSDK.SigningHashAlgorithm",
+                "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14RomanianEIDSDK19CardSignatureResultV13hashAlgorithmAA011SigningHashG0Ovp",
+            "mangledName": "$s14RomanianEIDSDK19CardSignatureResultV13hashAlgorithmAA011SigningHashG0Ovp",
+            "moduleName": "RomanianEIDSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SigningHashAlgorithm",
+                    "printedName": "RomanianEIDSDK.SigningHashAlgorithm",
+                    "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14RomanianEIDSDK19CardSignatureResultV13hashAlgorithmAA011SigningHashG0Ovg",
+                "mangledName": "$s14RomanianEIDSDK19CardSignatureResultV13hashAlgorithmAA011SigningHashG0Ovg",
+                "moduleName": "RomanianEIDSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(signature:certificate:hashAlgorithm:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CardSignatureResult",
+                "printedName": "RomanianEIDSDK.CardSignatureResult",
+                "usr": "s:14RomanianEIDSDK19CardSignatureResultV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SigningHashAlgorithm",
+                "printedName": "RomanianEIDSDK.SigningHashAlgorithm",
+                "usr": "s:14RomanianEIDSDK20SigningHashAlgorithmO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14RomanianEIDSDK19CardSignatureResultV9signature11certificate13hashAlgorithmAC10Foundation4DataV_AiA011SigningHashI0Otcfc",
+            "mangledName": "$s14RomanianEIDSDK19CardSignatureResultV9signature11certificate13hashAlgorithmAC10Foundation4DataV_AiA011SigningHashI0Otcfc",
+            "moduleName": "RomanianEIDSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14RomanianEIDSDK19CardSignatureResultV",
+        "mangledName": "$s14RomanianEIDSDK19CardSignatureResultV",
+        "moduleName": "RomanianEIDSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -33065,6 +34637,70 @@
           },
           {
             "kind": "Function",
+            "name": "signHash",
+            "printedName": "signHash(hash:can:signingPIN:options:delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CardSignatureResult",
+                "printedName": "RomanianEIDSDK.CardSignatureResult",
+                "usr": "s:14RomanianEIDSDK19CardSignatureResultV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SigningOptions",
+                "printedName": "RomanianEIDSDK.SigningOptions",
+                "hasDefaultArg": true,
+                "usr": "s:14RomanianEIDSDK14SigningOptionsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any RomanianEIDSDK.EIDReadDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EIDReadDelegate",
+                    "printedName": "any RomanianEIDSDK.EIDReadDelegate",
+                    "usr": "s:14RomanianEIDSDK15EIDReadDelegateP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14RomanianEIDSDK9EIDReaderC8signHash4hash3can10signingPIN7options8delegateAA19CardSignatureResultV10Foundation4DataV_S2SAA14SigningOptionsVAA15EIDReadDelegate_pSgtYaKF",
+            "mangledName": "$s14RomanianEIDSDK9EIDReaderC8signHash4hash3can10signingPIN7options8delegateAA19CardSignatureResultV10Foundation4DataV_S2SAA14SigningOptionsVAA15EIDReadDelegate_pSgtYaKF",
+            "moduleName": "RomanianEIDSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "saveIDCard",
             "printedName": "saveIDCard(_:)",
             "children": [
@@ -33501,6 +35137,34 @@
   },
   "ConstValues": [
     {
+      "filePath": "\/Users\/xcriss\/Library\/Developer\/Xcode\/DerivedData\/EIDRomania-fekwevyrjdjeqgctoyvbmgsybsie\/Build\/Intermediates.noindex\/ArchiveIntermediates\/RomanianEIDSDK\/IntermediateBuildFilesPath\/RomanianEIDSDK.build\/Release-iphoneos\/RomanianEIDSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "kind": "StringLiteral",
+      "offset": 307,
+      "length": 31,
+      "value": "\"RomanianEIDSDK_RomanianEIDSDK\""
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Library\/Developer\/Xcode\/DerivedData\/EIDRomania-fekwevyrjdjeqgctoyvbmgsybsie\/Build\/Intermediates.noindex\/ArchiveIntermediates\/RomanianEIDSDK\/IntermediateBuildFilesPath\/RomanianEIDSDK.build\/Release-iphoneos\/RomanianEIDSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "kind": "Array",
+      "offset": 985,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Library\/Developer\/Xcode\/DerivedData\/EIDRomania-fekwevyrjdjeqgctoyvbmgsybsie\/Build\/Intermediates.noindex\/ArchiveIntermediates\/RomanianEIDSDK\/IntermediateBuildFilesPath\/RomanianEIDSDK.build\/Release-iphoneos\/RomanianEIDSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "kind": "StringLiteral",
+      "offset": 1512,
+      "length": 9,
+      "value": "\".bundle\""
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Library\/Developer\/Xcode\/DerivedData\/EIDRomania-fekwevyrjdjeqgctoyvbmgsybsie\/Build\/Intermediates.noindex\/ArchiveIntermediates\/RomanianEIDSDK\/IntermediateBuildFilesPath\/RomanianEIDSDK.build\/Release-iphoneos\/RomanianEIDSDK.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "kind": "StringLiteral",
+      "offset": 1664,
+      "length": 59,
+      "value": "\"unable to find bundle named RomanianEIDSDK_RomanianEIDSDK\""
+    },
+    {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/CSCA\/CSCAMasterListManager.swift",
       "kind": "StringLiteral",
       "offset": 408,
@@ -33713,161 +35377,161 @@
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 6295,
+      "offset": 6459,
       "length": 15,
       "value": "\"NOT_SUPPORTED\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 6332,
+      "offset": 6496,
       "length": 11,
       "value": "\"SUCCEEDED\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 6362,
+      "offset": 6526,
       "length": 8,
       "value": "\"FAILED\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 6624,
+      "offset": 6851,
       "length": 9,
       "value": "\"UNKNOWN\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 6657,
+      "offset": 6884,
       "length": 14,
       "value": "\"NOT_VERIFIED\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 6692,
+      "offset": 6919,
       "length": 10,
       "value": "\"VERIFIED\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 6722,
+      "offset": 6949,
       "length": 9,
       "value": "\"BLOCKED\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7032,
+      "offset": 7337,
       "length": 5,
       "value": "\"DG1\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7071,
+      "offset": 7376,
       "length": 5,
       "value": "\"DG2\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7109,
+      "offset": 7414,
       "length": 5,
       "value": "\"DG3\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7147,
+      "offset": 7452,
       "length": 5,
       "value": "\"DG4\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7204,
+      "offset": 7509,
       "length": 5,
       "value": "\"DG5\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7238,
+      "offset": 7543,
       "length": 5,
       "value": "\"DG6\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7272,
+      "offset": 7577,
       "length": 5,
       "value": "\"DG7\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7307,
+      "offset": 7612,
       "length": 5,
       "value": "\"DG8\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7346,
+      "offset": 7651,
       "length": 5,
       "value": "\"DG9\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7391,
+      "offset": 7696,
       "length": 6,
       "value": "\"DG10\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7436,
+      "offset": 7741,
       "length": 6,
       "value": "\"DG11\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7490,
+      "offset": 7795,
       "length": 6,
       "value": "\"DG12\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7544,
+      "offset": 7849,
       "length": 6,
       "value": "\"DG13\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7587,
+      "offset": 7892,
       "length": 6,
       "value": "\"DG14\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7630,
+      "offset": 7935,
       "length": 6,
       "value": "\"DG15\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Models\/RomanianIDCard.swift",
       "kind": "StringLiteral",
-      "offset": 7689,
+      "offset": 7994,
       "length": 6,
       "value": "\"DG16\""
     },
@@ -36170,105 +37834,105 @@
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 1428,
+      "offset": 1715,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 1466,
+      "offset": 1753,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 1501,
+      "offset": 1788,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1562,
+      "offset": 1849,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1599,
+      "offset": 1886,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 1783,
+      "offset": 2070,
       "length": 42,
       "value": "[0xA0, 0x00, 0x00, 0x02, 0x47, 0x10, 0x01]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 1931,
+      "offset": 2218,
       "length": 96,
       "value": "[0xA0, 0x00, 0x00, 0x00, 0x77, 0x03, 0x0C, 0x60, 0x00, 0x00, 0x00, 0xFE, 0x00, 0x00, 0x05, 0x00]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 2226,
+      "offset": 2513,
       "length": 90,
       "value": "[0xE8, 0x28, 0xBD, 0x08, 0x0F, 0xA0, 0x00, 0x00, 0x01, 0x67, 0x45, 0x44, 0x41, 0x54, 0x41]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 2464,
+      "offset": 2751,
       "length": 12,
       "value": "[0x01, 0x01]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 2554,
+      "offset": 2841,
       "length": 12,
       "value": "[0x01, 0x02]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 2641,
+      "offset": 2928,
       "length": 12,
       "value": "[0x01, 0x04]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 2735,
+      "offset": 3022,
       "length": 12,
       "value": "[0x01, 0x06]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 2816,
+      "offset": 3103,
       "length": 12,
       "value": "[0x01, 0x07]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 2910,
+      "offset": 3197,
       "length": 12,
       "value": "[0x01, 0x08]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 5574,
+      "offset": 6589,
       "length": 2,
       "value": "[]"
     },
@@ -36303,7 +37967,7 @@
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/PassportBACReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 7409,
+      "offset": 7272,
       "length": 5,
       "value": "false"
     },
@@ -36320,6 +37984,62 @@
       "offset": 2058,
       "length": 49,
       "value": "\"❌ Invalid embedded public key - SDK corrupted\""
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Signing\/SigningConfiguration.swift",
+      "kind": "Array",
+      "offset": 3289,
+      "length": 118,
+      "value": "[0xE8, 0x28, 0xBD, 0x08, 0x0F, 0xD2, 0x50, 0x47, 0x65, 0x6E, 0x65, 0x72, 0x69, 0x63]"
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Signing\/SigningConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3439,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Signing\/SigningConfiguration.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3474,
+      "length": 4,
+      "value": "0x05"
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Signing\/SigningConfiguration.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3509,
+      "length": 4,
+      "value": "0x8E"
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Signing\/SigningConfiguration.swift",
+      "kind": "Array",
+      "offset": 3550,
+      "length": 24,
+      "value": "[0xFF, 0x20, 0x08, 0x00]"
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Signing\/SigningConfiguration.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3635,
+      "length": 4,
+      "value": "0xA4"
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Signing\/SigningConfiguration.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3811,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Signing\/SigningConfiguration.swift",
+      "kind": "Array",
+      "offset": 3845,
+      "length": 12,
+      "value": "[0xCE, 0x8E]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Storage\/KeychainStorage.swift",
@@ -36364,6 +38084,20 @@
       "value": "200"
     },
     {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Utils\/L10n.swift",
+      "kind": "StringLiteral",
+      "offset": 2248,
+      "length": 34,
+      "value": "\"EIDLocalizationLanguageDidChange\""
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Utils\/L10n.swift",
+      "kind": "StringLiteral",
+      "offset": 2330,
+      "length": 36,
+      "value": "\"ro.up2date.eidromania.localization\""
+    },
+    {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Utils\/OpenSSLUtils.swift",
       "kind": "BooleanLiteral",
       "offset": 258,
@@ -36387,373 +38121,394 @@
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "BooleanLiteral",
-      "offset": 1835,
+      "offset": 1926,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "BooleanLiteral",
-      "offset": 3986,
+      "offset": 4156,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 5857,
+      "offset": 6146,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 5888,
+      "offset": 6177,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 5922,
+      "offset": 6211,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 5956,
+      "offset": 6245,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 5982,
+      "offset": 6310,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 6017,
+      "offset": 6345,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "BooleanLiteral",
-      "offset": 6270,
+      "offset": 6598,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 8678,
+      "offset": 9130,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 8704,
+      "offset": 9156,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 8735,
+      "offset": 9187,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 8769,
+      "offset": 9221,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 8795,
+      "offset": 9247,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 8830,
+      "offset": 9318,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "BooleanLiteral",
-      "offset": 9176,
+      "offset": 9664,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "BooleanLiteral",
-      "offset": 10564,
+      "offset": 11091,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 10587,
+      "offset": 11114,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "BooleanLiteral",
-      "offset": 10679,
+      "offset": 11206,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 10717,
+      "offset": 11244,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "BooleanLiteral",
-      "offset": 11736,
+      "offset": 12263,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "BooleanLiteral",
-      "offset": 11761,
+      "offset": 12288,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "BooleanLiteral",
-      "offset": 11790,
+      "offset": 12317,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 11813,
+      "offset": 12340,
       "length": 2,
       "value": "90"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "BooleanLiteral",
-      "offset": 11974,
+      "offset": 12501,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "BooleanLiteral",
-      "offset": 11999,
+      "offset": 12526,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "BooleanLiteral",
-      "offset": 12029,
+      "offset": 12556,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 12053,
+      "offset": 12580,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "BooleanLiteral",
-      "offset": 12145,
+      "offset": 12672,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "BooleanLiteral",
-      "offset": 12177,
+      "offset": 12704,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "BooleanLiteral",
-      "offset": 12213,
+      "offset": 12740,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 12251,
+      "offset": 12778,
       "length": 2,
       "value": "90"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "FloatLiteral",
-      "offset": 18246,
+      "offset": 18773,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "BooleanLiteral",
-      "offset": 18278,
+      "offset": 18805,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 18311,
+      "offset": 18838,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "Array",
-      "offset": 18352,
+      "offset": 18879,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 24782,
+      "offset": 25309,
       "length": 17,
       "value": "\"passportReading\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 24825,
+      "offset": 25352,
       "length": 15,
       "value": "\"idCardReading\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 24864,
+      "offset": 25391,
       "length": 13,
       "value": "\"ocrScanning\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 24904,
+      "offset": 25431,
       "length": 16,
       "value": "\"cscaValidation\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 24952,
+      "offset": 25479,
       "length": 21,
       "value": "\"biometricExtraction\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 25002,
+      "offset": 25529,
       "length": 18,
       "value": "\"advancedSecurity\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 25103,
+      "offset": 25575,
+      "length": 17,
+      "value": "\"documentSigning\""
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
+      "kind": "StringLiteral",
+      "offset": 25675,
       "length": 7,
       "value": "\"trial\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 25133,
+      "offset": 25705,
       "length": 12,
       "value": "\"commercial\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 25169,
+      "offset": 25741,
       "length": 13,
       "value": "\"development\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 25200,
+      "offset": 25772,
       "length": 7,
       "value": "\"basic\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 25223,
+      "offset": 25795,
       "length": 5,
       "value": "\"pro\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "StringLiteral",
-      "offset": 25251,
+      "offset": 25823,
       "length": 12,
       "value": "\"enterprise\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 25375,
+      "offset": 25947,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 25394,
+      "offset": 25966,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 25415,
+      "offset": 25987,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 25433,
+      "offset": 26005,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
       "kind": "IntegerLiteral",
-      "offset": 25452,
+      "offset": 26024,
       "length": 1,
       "value": "4"
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 29910,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
+      "kind": "IntegerLiteral",
+      "offset": 30052,
+      "length": 2,
+      "value": "60"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/RomanianEIDSDK+Public.swift",
@@ -36766,15 +38521,15 @@
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/RomanianEIDSDK+Public.swift",
       "kind": "StringLiteral",
       "offset": 1666,
-      "length": 7,
-      "value": "\"1.0.0\""
+      "length": 8,
+      "value": "\"1.4.23\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/RomanianEIDSDK+Public.swift",
       "kind": "Array",
-      "offset": 2465,
-      "length": 269,
-      "value": "[\"A0000002471001\", \"A000000077030C60000000FE00000500\", \"E828BD080FA000000167454441544100\"]"
+      "offset": 2466,
+      "length": 380,
+      "value": "[\"A0000002471001\", \"A000000077030C60000000FE00000500\", \"E828BD080FA000000167454441544100\", \"A000000077010800070000FE00000100\"]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/RomanianEIDSDK.swift",

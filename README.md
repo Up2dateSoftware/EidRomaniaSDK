@@ -94,7 +94,7 @@ https://github.com/Up2dateSoftware/EidRomaniaSDK.git
 Or add to your `Package.swift`:
 ```swift
 dependencies: [
-    .package(url: "https://github.com/Up2dateSoftware/EidRomaniaSDK.git", exact: "1.4.17")
+    .package(url: "https://github.com/Up2dateSoftware/EidRomaniaSDK.git", exact: "1.4.23")
 ]
 ```
 
@@ -287,35 +287,40 @@ console.log('Address:', idCardData.permanentAddress);
 ```swift
 import RomanianEIDSDK
 
-// Initialize SDK
-try await RomanianEIDSDK.initialize(licenseKey: "YOUR_LICENSE_JWT_HERE")
+// Initialize SDK (do this once at launch)
+try EIDLicenseManager.shared.initialize(licenseKey: "YOUR_LICENSE_JWT_HERE")
 
-// Read passport
-let passportResult = try await RomanianEIDSDK.readPassport(
-    from: self,
+// Read passport (NFC, BAC/PACE)
+let passport = try await EIDReader.shared.readPassport(
     mrzKey: mrzKey,
-    options: PassportReadOptions(
-        enableCSCAValidation: true,
-        timeout: 60
-    )
+    options: PassportReadOptions(enableCSCAValidation: true, timeout: 60)
 )
+print("Name:", passport.fullName, "CNP:", passport.cnp ?? "-")
 
-print("Name: \(passportResult.fullName)")
-print("Photo: \(passportResult.facialImageBase64)")
-
-// Read ID card
-let idCardResult = try await RomanianEIDSDK.readIDCard(
-    from: self,
+// Read eID card (NFC, PACE + PIN)
+let card = try await EIDReader.shared.readIDCard(
     can: can,
-    pin: pin,
+    pin: pin,                       // data PIN, 4–8 digits
     options: IDCardReadOptions(
         enableCSCAValidation: true,
         readPhoto: true,
         readSignature: true
     )
 )
+print("CNP:", card.cnp, "Address:", card.permanentAddress ?? "-")
 
-print("CNP: \(idCardResult.cnp)")
+// Sign a precomputed hash with the on-card eSign sub-application
+let result = try await EIDReader.shared.signHash(
+    hash: sha384OfPDF,              // 48 bytes
+    can: can,
+    signingPIN: signingPIN,          // the *signing* PIN (separate from data PIN)
+    options: SigningOptions(hashAlgorithm: .sha384)
+)
+// result.signature  : raw r||s from the card
+// result.certificate: DER-encoded X.509 signer certificate
+
+// Runtime language switch (no app restart)
+EIDLocalization.setLanguage("ro")    // or "en", or nil for system default
 ```
 
 ## 🐛 Troubleshooting
@@ -376,13 +381,23 @@ Include in your request:
 
 ## 🔄 Version History
 
-### Version 1.4.0 (Current)
-- ✅ **Fixed**: Romanian ID card tag inversion bug (dateOfExpiry/issuingAuthority were swapped)
-- ✅ **Added**: React Native New Architecture support (Fabric/Bridgeless mode)
-- ✅ **Improved**: PACE protocol implementation and error handling
-- ✅ **Enhanced**: Logging and debugging capabilities
-- ✅ **Updated**: Complete React Native example application
-- ✅ **Updated**: Comprehensive documentation
+### Version 1.4.23 (Current)
+- ✅ **Added**: Runtime language switching via `EIDLocalization.setLanguage(_:)`
+  with `languageDidChangeNotification` for live UI refresh
+- ✅ **Added**: Document signing API – `EIDReader.shared.signHash(hash:can:signingPIN:options:)`
+  – calibrated for the Romanian CEI / IDEMIA eSign sub-application (ECDSA P-384 / SHA-384)
+- ✅ **Added**: PAdES B-B inline + CAdES detached signing example in the demo app
+- ✅ **Added**: `MRZScanResult`, `OCRScanResult`, `CardSignatureResult` public models
+- ✅ **Added**: Keychain-backed persistence for passport + ID card results
+- ✅ **Fixed**: ID card tag mapping (0x81 = issue, 0x82 = expiry, 0x83 = authority)
+- ✅ **Fixed**: Main-thread crashes during NFC alert/invalidate and camera presentation
+- ✅ **Changed**: `readIDCard` now requires both `can` and `pin`
+- ✅ **Changed**: Minimum iOS bumped to 15.0 (for PACE + signing flow)
+
+### Version 1.4.0
+- ✅ MRZ scanner (Vision-based) with TD3 detection
+- ✅ Performance pass – removed all debug logging from hot paths
+- ✅ Documentation overhaul
 
 ### Version 1.3.0
 - Added OCR scanning for old non-NFC cards
