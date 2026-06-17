@@ -5,6 +5,17 @@ All notable changes to the Romanian eID SDK for React Native will be documented 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.0] - 2026-06-17
+
+### iOS
+
+- Refreshed bundled `RomanianEIDSDK.xcframework` to the 1.5.0 native build.
+- Native side adds the new `EIDReader.shared.signDocument(can:signingPIN:options:delegate:prepareHash:)`
+  public API for single-tap PAdES-style signing where the caller derives the
+  hash from the on-card signing certificate (returned via the closure)
+  before the PIN/MSE/SIGN step.
+- All previous 1.4.x APIs remain unchanged — drop-in upgrade.
+
 ## [1.4.23] - 2026-06-16
 
 ### iOS

@@ -34,7 +34,7 @@ https://github.com/Up2dateSoftware/EidRomaniaSDK.git
 ```
 
 ```swift
-.package(url: "https://github.com/Up2dateSoftware/EidRomaniaSDK.git", exact: "1.4.23")
+.package(url: "https://github.com/Up2dateSoftware/EidRomaniaSDK.git", exact: "1.5.0")
 ```
 
 ### Manual XCFramework
@@ -106,24 +106,37 @@ print(card.cnp, card.permanentAddress ?? "-", card.issuingAuthority ?? "-")
 
 ### 4 · Sign a hash with the card's eSign sub-application
 
-```swift
-let digest = SHA384.hash(data: pdfBytes)            // 48-byte SHA-384
-let hash = Data(digest)
+Two variants:
 
+**(a) Pre-computed hash:**
+
+```swift
 let result = try await EIDReader.shared.signHash(
-    hash: hash,
+    hash: SHA384.hash(data: pdfBytes),
     can: "123456",
-    signingPIN: "123456",               // signing PIN (separate from the data PIN)
+    signingPIN: "123456",
     options: SigningOptions(hashAlgorithm: .sha384, timeout: 60)
 )
-
-let rawSignature = result.signature      // raw r||s from the card (96 B for P-384)
-let signerCertDER = result.certificate   // DER-encoded X.509 signing certificate
 ```
 
-Wrap `result` into CMS / PAdES / CAdES on the device or send it to a
-backend. The example app ships a full PAdES B-B inline implementation
-with a CAdES-detached `.p7s` sidecar.
+**(b) Single-tap PAdES — closure receives the cert before signing** (1.5+):
+
+```swift
+let result = try await EIDReader.shared.signDocument(
+    can: "123456",
+    signingPIN: "123456",
+    options: SigningOptions(hashAlgorithm: .sha384)
+) { certDER in
+    // Build SignedAttributes with signingCertificateV2 etc.
+    let attrs = MyCMS.buildSignedAttributes(messageDigest: pdfDigest, cert: certDER)
+    return SHA384.hash(data: attrs)   // 48-byte hash returned to the card
+}
+```
+
+`result.signature` is the raw r‖s from the card (96 B for P-384);
+`result.certificate` is the DER-encoded X.509 signing certificate. Wrap
+into CMS/PAdES/CAdES. The example app ships a full PAdES B-B inline
+implementation with bundled CEI MAI trust chain.
 
 ### 5 · MRZ + OCR camera flows
 
@@ -175,6 +188,8 @@ EIDReader.shared
     .readIDCard(can:, pin:, options:, delegate:) async throws -> IDCardResult
     .signHash(hash:, can:, signingPIN:, options:, delegate:) async throws
         -> CardSignatureResult
+    .signDocument(can:, signingPIN:, options:, delegate:, prepareHash:) async throws
+        -> CardSignatureResult                  // 1.5+ – cert-derived hash
     .startMRZScanning(from:, delegate:) async throws -> MRZScanResult
     .startOCRScanning(from:, delegate:) async throws -> OCRScanResult
     .scanIDCard(image:) async throws -> OCRScanResult

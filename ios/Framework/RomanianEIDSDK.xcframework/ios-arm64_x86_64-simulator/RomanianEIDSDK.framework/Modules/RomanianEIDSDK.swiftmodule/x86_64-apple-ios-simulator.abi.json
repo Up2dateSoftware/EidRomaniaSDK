@@ -34701,6 +34701,83 @@
           },
           {
             "kind": "Function",
+            "name": "signDocument",
+            "printedName": "signDocument(can:signingPIN:options:delegate:prepareHash:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CardSignatureResult",
+                "printedName": "RomanianEIDSDK.CardSignatureResult",
+                "usr": "s:14RomanianEIDSDK19CardSignatureResultV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SigningOptions",
+                "printedName": "RomanianEIDSDK.SigningOptions",
+                "hasDefaultArg": true,
+                "usr": "s:14RomanianEIDSDK14SigningOptionsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any RomanianEIDSDK.EIDReadDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EIDReadDelegate",
+                    "printedName": "any RomanianEIDSDK.EIDReadDelegate",
+                    "usr": "s:14RomanianEIDSDK15EIDReadDelegateP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Foundation.Data) async throws -> Foundation.Data",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14RomanianEIDSDK9EIDReaderC12signDocument3can10signingPIN7options8delegate11prepareHashAA19CardSignatureResultVSS_SSAA14SigningOptionsVAA15EIDReadDelegate_pSg10Foundation4DataVARYaYbKctYaKF",
+            "mangledName": "$s14RomanianEIDSDK9EIDReaderC12signDocument3can10signingPIN7options8delegate11prepareHashAA19CardSignatureResultVSS_SSAA14SigningOptionsVAA15EIDReadDelegate_pSg10Foundation4DataVARYaYbKctYaKF",
+            "moduleName": "RomanianEIDSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "saveIDCard",
             "printedName": "saveIDCard(_:)",
             "children": [
@@ -37834,105 +37911,105 @@
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 1715,
+      "offset": 2820,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 1753,
+      "offset": 2858,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 1788,
+      "offset": 2893,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1849,
+      "offset": 2954,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 1886,
+      "offset": 2991,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 2070,
+      "offset": 3175,
       "length": 42,
       "value": "[0xA0, 0x00, 0x00, 0x02, 0x47, 0x10, 0x01]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 2218,
+      "offset": 3323,
       "length": 96,
       "value": "[0xA0, 0x00, 0x00, 0x00, 0x77, 0x03, 0x0C, 0x60, 0x00, 0x00, 0x00, 0xFE, 0x00, 0x00, 0x05, 0x00]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 2513,
+      "offset": 3618,
       "length": 90,
       "value": "[0xE8, 0x28, 0xBD, 0x08, 0x0F, 0xA0, 0x00, 0x00, 0x01, 0x67, 0x45, 0x44, 0x41, 0x54, 0x41]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 2751,
+      "offset": 3856,
       "length": 12,
       "value": "[0x01, 0x01]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 2841,
+      "offset": 3946,
       "length": 12,
       "value": "[0x01, 0x02]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 2928,
+      "offset": 4033,
       "length": 12,
       "value": "[0x01, 0x04]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 3022,
+      "offset": 4127,
       "length": 12,
       "value": "[0x01, 0x06]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 3103,
+      "offset": 4208,
       "length": 12,
       "value": "[0x01, 0x07]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 3197,
+      "offset": 4302,
       "length": 12,
       "value": "[0x01, 0x08]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Readers\/CompleteRomanianEIDReader.swift",
       "kind": "Array",
-      "offset": 6589,
+      "offset": 7694,
       "length": 2,
       "value": "[]"
     },
@@ -38521,13 +38598,13 @@
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/RomanianEIDSDK+Public.swift",
       "kind": "StringLiteral",
       "offset": 1666,
-      "length": 8,
-      "value": "\"1.4.23\""
+      "length": 7,
+      "value": "\"1.5.0\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/RomanianEIDSDK+Public.swift",
       "kind": "Array",
-      "offset": 2466,
+      "offset": 2465,
       "length": 380,
       "value": "[\"A0000002471001\", \"A000000077030C60000000FE00000500\", \"E828BD080FA000000167454441544100\", \"A000000077010800070000FE00000100\"]"
     },

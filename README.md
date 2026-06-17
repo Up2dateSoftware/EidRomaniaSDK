@@ -94,7 +94,7 @@ https://github.com/Up2dateSoftware/EidRomaniaSDK.git
 Or add to your `Package.swift`:
 ```swift
 dependencies: [
-    .package(url: "https://github.com/Up2dateSoftware/EidRomaniaSDK.git", exact: "1.4.23")
+    .package(url: "https://github.com/Up2dateSoftware/EidRomaniaSDK.git", exact: "1.5.0")
 ]
 ```
 
@@ -381,7 +381,19 @@ Include in your request:
 
 ## 🔄 Version History
 
-### Version 1.4.23 (Current)
+### Version 1.5.0 (Current)
+- ✅ **Added**: `EIDReader.shared.signDocument(can:signingPIN:options:delegate:prepareHash:)`
+  — single-tap PAdES-style signing with cert-derived hash callback
+- ✅ **Added**: Bundled CEI MAI Sub-CA + Root-CA in the example app — CMS now
+  carries the full chain so PDF readers can build it offline
+- ✅ **Added**: Adobe-style 2-column PAdES B-B visible appearance with
+  Romanian diacritics (Helvetica + `/Differences` + ToUnicode CMap)
+- ✅ **Fixed**: Adobe Acrobat "Bad parameter" verification error — UTCTime
+  encoding (iOS DateFormatter POSIX locale fix), RFC 5754 SHA-2 AlgId
+  parameters absent, raw issuer extracted from cert TBS
+- ✅ Drop-in upgrade from 1.4.x — legacy `signHash` API still works
+
+### Version 1.4.23
 - ✅ **Added**: Runtime language switching via `EIDLocalization.setLanguage(_:)`
   with `languageDidChangeNotification` for live UI refresh
 - ✅ **Added**: Document signing API – `EIDReader.shared.signHash(hash:can:signingPIN:options:)`

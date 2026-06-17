@@ -1240,6 +1240,7 @@ final public class EIDReader {
   final public func scanIDCard(image: UIKit.UIImage) async throws -> RomanianEIDSDK.OCRScanResult
   final public func readIDCard(can: Swift.String, pin: Swift.String, options: RomanianEIDSDK.IDCardReadOptions = .default, delegate: (any RomanianEIDSDK.EIDReadDelegate)? = nil) async throws -> RomanianEIDSDK.IDCardResult
   final public func signHash(hash: Foundation.Data, can: Swift.String, signingPIN: Swift.String, options: RomanianEIDSDK.SigningOptions = .default, delegate: (any RomanianEIDSDK.EIDReadDelegate)? = nil) async throws -> RomanianEIDSDK.CardSignatureResult
+  final public func signDocument(can: Swift.String, signingPIN: Swift.String, options: RomanianEIDSDK.SigningOptions = .default, delegate: (any RomanianEIDSDK.EIDReadDelegate)? = nil, prepareHash: @escaping @Sendable (Foundation.Data) async throws -> Foundation.Data) async throws -> RomanianEIDSDK.CardSignatureResult
   final public func saveIDCard(_ result: RomanianEIDSDK.IDCardResult) throws
   final public func loadIDCard() throws -> RomanianEIDSDK.IDCardResult?
   final public func deleteIDCard() throws

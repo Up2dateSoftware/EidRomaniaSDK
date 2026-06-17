@@ -5,6 +5,55 @@ All notable changes to the Romanian eID SDK will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.0] - 2026-06-17
+
+### iOS SDK
+
+#### Added
+- **`EIDReader.shared.signDocument(can:signingPIN:options:delegate:prepareHash:)`**
+  — single-tap signing flow that reads the signing certificate first, hands
+  it to a caller-provided closure (so the caller can build PAdES
+  SignedAttributes including `signingCertificateV2` and render a visible
+  appearance using the real CN), then verifies the PIN and signs — all in
+  one NFC tap. Closes the gap that previously forced apps to either pick a
+  placeholder signer name or do two NFC sessions.
+- **`SigningRequest.HashSource`** enum (internal) with `.precomputed(Data)`
+  and `.derivedFromCertificate(closure)` variants. Lets the same reader
+  drive both legacy and new signing paths.
+- **`ESignAppletHandler.signWithCertificateContext(signingPIN:hashProvider:)`**
+  reorders the eSign APDU sequence to SELECT → READ cert → callback →
+  VERIFY PIN → MSE:SET → INTERNAL AUTHENTICATE, allowing the caller to
+  bind the hash to the certificate inside a single session.
+
+#### Demo app improvements (Example/EID SDKExample)
+- **PAdES B-B visible appearance** rewritten as an Adobe-style 2-column
+  stamp: large signer name (auto-fit + word-wrap) on the left, metadata
+  (Digitally signed by / Date / Reason / Location) on the right, subtle
+  grey border, "Signed with eidromania.ro" footer.
+- **Romanian diacritics** (ă/Ă/ș/Ș/ț/Ț) rendered via Helvetica + a custom
+  `/Encoding /Differences` table and a `ToUnicode` CMap stream, so the
+  text remains copy-pasteable from the signed PDF.
+- **Per-line word-wrap** with AFM-accurate width estimation for the 14
+  Standard Helvetica glyphs.
+- **`/SubFilter` toggle** in the UI (`ETSI.CAdES.detached` vs
+  `adbe.pkcs7.detached`) for debugging.
+- **Bundled CEI MAI Sub-CA + Root-CA** as app resources and embedded into
+  the CMS `certificates [0] IMPLICIT` SET, so PDF readers can resolve the
+  trust chain offline.
+- **DateFormatter POSIX locale fix** in `ASN1DERWriter.utcTime` and the
+  PDF `/M` date — without it, iOS injected a NARROW NO-BREAK SPACE +
+  "AM" between the time and the `Z` marker, producing an 18-byte UTCTime
+  instead of the mandated 13 bytes and causing Adobe Acrobat to fail
+  signature verification with the generic "Bad parameter" error.
+- **Raw issuer extraction** from the certificate's TBS instead of
+  `SecCertificateCopyNormalizedIssuerSequence`, so the `IssuerAndSerialNumber`
+  byte-matches the cert exactly.
+- **RFC 5754 compliance**: SHA-2 family AlgorithmIdentifiers in CMS now
+  encode parameters as ABSENT (not NULL).
+
+No breaking changes vs 1.4.23 — `signHash(hash:can:signingPIN:…)` remains
+fully supported.
+
 ## [1.4.23] - 2026-06-16
 
 ### iOS SDK
