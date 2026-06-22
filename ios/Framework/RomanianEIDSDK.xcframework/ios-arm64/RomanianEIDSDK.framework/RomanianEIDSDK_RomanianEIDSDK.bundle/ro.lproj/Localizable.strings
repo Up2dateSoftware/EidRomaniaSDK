@@ -1,0 +1,158 @@
+/* NFC session alerts (visible on the iOS NFC popup) */
+"nfc.hold_card"                  = "⚠️ Țineți cardul NEMIȘCAT pe spatele telefonului";
+"nfc.card_found"                 = "Card găsit! Nu mișcați…";
+"nfc.security_check"             = "Verificare securitate…";
+"nfc.access_granted"             = "Acces permis!";
+"nfc.reading_photo"              = "Citesc fotografia…";
+"nfc.preparing_signing"          = "Pregătesc semnarea…";
+"nfc.signature_created"          = "Semnătura a fost creată";
+"nfc.read_complete"              = "Gata! Datele au fost citite";
+"nfc.read_error"                 = "Eroare la citire";
+"nfc.signing_error"              = "Eroare la semnare";
+"nfc.incompatible_card"          = "Card incompatibil";
+"nfc.connection_error"           = "Eroare la conectare";
+"nfc.reading_signature"          = "Citesc semnătura…";
+"nfc.reading_personal_data"      = "Citesc datele personale…";
+"nfc.not_available"              = "NFC nu este disponibil";
+"nfc.not_supported"              = "NFC nu este suportat pe acest dispozitiv.";
+
+/* Progress messages relayed to the host app via EIDReadDelegate */
+"progress.verifying_can"         = "Verificare CAN…";
+"progress.reading_cardaccess"    = "Citire CardAccess…";
+"progress.pace_auth"             = "PACE autentificare…";
+"progress.pace_auth_pcsc"        = "PACE autentificare (PC/SC)…";
+"progress.pace_complete"         = "PACE completat!";
+"progress.reselect_mrtd"         = "Re-selecție MRTD app…";
+"progress.reading_com"           = "Citire COM…";
+"progress.reading_photo"         = "Citire poză…";
+"progress.reading_signature"     = "Citire semnătură…";
+"progress.national_app_access"   = "Acces aplicație națională…";
+"progress.security_check"        = "Verificare securitate…";
+"progress.verifying_pin"         = "Verificare PIN…";
+"progress.personal_data_access"  = "Acces date personale…";
+"progress.reading_data"          = "Citire date…";
+"progress.csca_validation"       = "Validare CSCA…";
+"progress.done"                  = "Finalizat!";
+"progress.selecting_sign_applet" = "Selectez applet semnare…";
+"progress.signature_created"     = "Semnătură creată";
+
+/* Errors */
+"error.pin_incorrect"            = "PIN incorect. Încercări rămase: %d";
+"error.pin_blocked"              = "PIN blocat";
+"error.pin_verify_failed"        = "Verificare PIN eșuată";
+"error.no_signing_request"       = "Nu există cerere de semnare configurată";
+"error.no_card_connection"       = "Nu există conexiune cu cardul";
+"error.no_tag_reader_after_pace" = "TagReader indisponibil după PACE";
+"error.pace_no_sm"               = "PACE completat, dar SecureMessaging neinițializat";
+"error.no_cardaccess"            = "CardAccess negăsit și nu există fallback";
+"error.no_paceinfo"              = "Nu există PACEInfo în CardAccess";
+"error.no_reader"                = "TagReader neinițializat";
+"error.mrtd_select_failed"       = "Selectarea aplicației MRTD a eșuat";
+"error.national_select_failed"   = "Selectarea aplicației naționale a eșuat";
+"error.data_select_failed"       = "Selectarea aplicației Data a eșuat";
+"error.mrtd_reselect_sm"         = "Re-selecția MRTD cu SM a eșuat: SW=%@";
+
+/* Passport errors */
+"passport.invalid_mrz"           = "Date MRZ invalide. Verificați numărul documentului, data nașterii și data expirării.";
+"passport.multiple_tags"         = "Detectate mai multe carduri NFC. Îndepărtați toate cardurile în afară de pașaport.";
+"passport.connection_lost"       = "Conexiune pierdută. Țineți pașaportul apropiat de telefon.";
+"passport.invalid_tag"           = "Tag NFC invalid. Folosiți un pașaport electronic valid.";
+"passport.timeout"               = "Timeout. Încercați din nou și țineți pașaportul nemișcat.";
+"passport.communication_error"   = "Eroare comunicare: %@ (SW=%@)";
+"passport.unknown_error"         = "Eroare necunoscută: %@";
+
+/* CSCA validation */
+"csca.validation_error"          = "Eroare validare: %@";
+"csca.dsc_extraction_error"      = "Eroare extragere DSC: %@";
+"csca.sod_missing"               = "SOD lipsește";
+"csca.sod_missing_passport"      = "SOD lipsește din pașaport";
+"csca.sod_unreadable"            = "SOD nu a putut fi citit";
+"csca.sod_missing_validation"    = "SOD lipsește - validare imposibilă";
+"csca.dsc_missing_in_sod"        = "Certificat DSC lipsește în SOD";
+
+/* OCR */
+"ocr.alert_title"                = "Eroare";
+"ocr.text_recognition_error"     = "Eroare recunoaștere text: %@";
+
+/* Smart card */
+"smartcard.communication_error"  = "Eroare la comunicarea cu cardul";
+
+/* Data groups */
+"dg.signature"                   = "Semnătură";
+"dg.com"                         = "Header conținut";
+"dg.dg1"                         = "Date document";
+"dg.dg2"                         = "Fotografie";
+"dg.dg3"                         = "Amprente";
+"dg.dg4"                         = "Iris";
+"dg.dg5"                         = "Portret";
+"dg.dg6"                         = "Rezervat";
+"dg.dg8"                         = "Date caracteristice";
+"dg.dg9"                         = "Caracteristici structurale";
+"dg.dg10"                        = "Caracteristici substanță";
+"dg.dg11"                        = "Detalii deținător";
+"dg.dg12"                        = "Detalii document";
+"dg.dg13"                        = "Detalii opționale";
+"dg.dg14"                        = "Opțiuni securitate";
+"dg.dg15"                        = "Cheie publică autentificare";
+"dg.dg16"                        = "Persoane de contact";
+"dg.sod"                         = "Document Security Object";
+
+/* Finger positions */
+"finger.right_thumb"             = "Degetul mare drept";
+"finger.right_index"             = "Arătător drept";
+"finger.right_middle"            = "Mijlociu drept";
+"finger.right_ring"              = "Inelar drept";
+"finger.right_little"            = "Mic drept";
+"finger.left_thumb"              = "Degetul mare stâng";
+"finger.left_index"              = "Arătător stâng";
+"finger.left_middle"             = "Mijlociu stâng";
+"finger.left_ring"               = "Inelar stâng";
+"finger.left_little"             = "Mic stâng";
+
+/* Status */
+"status.success"                 = "Reușit";
+"status.failed"                  = "Eșuat";
+"status.in_progress"             = "În desfășurare";
+"status.not_started"             = "Neînceput";
+"status.not_supported"           = "Nesuportat";
+"status.unknown"                 = "Necunoscut";
+"status.not_verified"            = "Neverificat";
+"status.verified"                = "Verificat";
+"status.blocked"                 = "Blocat";
+
+/* MRZ camera UI */
+"mrz.instruction"                = "Scanează MRZ-ul pașaportului";
+"mrz.alignment_hint"             = "Aliniază cele 2 linii MRZ în dreptunghi";
+"mrz.detected"                   = "MRZ detectat! ✓";
+
+/* OCR camera UI */
+"ocr.camera_instruction"         = "Poziționează cardul de identitate\nîn cadru și apasă butonul";
+"ocr.button_capture"             = "Fotografiază";
+"ocr.button_cancel"              = "Anulează";
+"ocr.camera_unavailable"         = "Camera nu este disponibilă";
+"ocr.processing_image"           = "Se procesează imaginea…";
+"ocr.extracting_data"            = "Se extrag datele din imagine…";
+"ocr.finalizing"                 = "Finalizare…";
+"ocr.invalid_image"              = "Imagine invalidă";
+"ocr.no_text_found"              = "Niciun text găsit în imagine";
+"ocr.request_failed"             = "Cerere eșuată: %@";
+
+/* OCR validation issues */
+"validation.missing_document_number" = "Număr document lipsă";
+"validation.missing_name"            = "Nume lipsă sau incomplet";
+"validation.missing_cnp"             = "CNP lipsă";
+"validation.missing_dates"           = "Date lipsă sau invalide";
+"validation.missing_address"         = "Adresă lipsă";
+"validation.missing_authority"       = "Autoritate emitentă lipsă";
+"validation.invalid_mrz"             = "MRZ (cod de bare) invalid sau lipsă";
+
+/* Passport text */
+"passport.scan_failed"           = "Scanare eșuată";
+"passport.photo_placeholder"     = "📷 Fotografie\nPașaport";
+"passport.signature_placeholder" = "✍️ Semnătură\nPașaport";
+"passport.label_nationality"     = "🌍 Naționalitate: %@";
+"passport.label_date_of_birth"   = "🎂 Data nașterii: %@";
+"passport.label_name"            = "👤 Nume: %@";
+"passport.label_document"        = "📄 Document: %@";
+"passport.label_cnp"             = "🆔 CNP: %@";
+"passport.label_mrz"             = "\n📋 MRZ:\n%@";

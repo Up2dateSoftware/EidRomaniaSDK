@@ -5,6 +5,16 @@ All notable changes to the Romanian eID SDK for React Native will be documented 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.1] - 2026-06-18
+
+### iOS
+
+- Refreshed bundled `RomanianEIDSDK.xcframework` to 1.5.1, which now ships
+  the SwiftPM-generated `RomanianEIDSDK_RomanianEIDSDK.bundle` next to the
+  Mach-O binary inside each `.framework` slice. Fixes the runtime crash
+  *Fatal error: unable to find bundle named RomanianEIDSDK_RomanianEIDSDK*
+  that affected 1.5.0 installs.
+
 ## [1.5.0] - 2026-06-17
 
 ### iOS

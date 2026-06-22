@@ -1,0 +1,158 @@
+/* NFC session alerts (visible on the iOS NFC popup) */
+"nfc.hold_card"                  = "Hold the card still against the back of the phone";
+"nfc.card_found"                 = "Card found! Hold steady…";
+"nfc.security_check"             = "Verifying security…";
+"nfc.access_granted"             = "Access granted!";
+"nfc.reading_photo"              = "Reading photo…";
+"nfc.preparing_signing"          = "Preparing signature…";
+"nfc.signature_created"          = "Signature created";
+"nfc.read_complete"              = "Done! Card data was read";
+"nfc.read_error"                 = "Reading failed";
+"nfc.signing_error"              = "Signing failed";
+"nfc.incompatible_card"          = "Incompatible card";
+"nfc.connection_error"           = "Connection error";
+"nfc.reading_signature"          = "Reading signature…";
+"nfc.reading_personal_data"      = "Reading personal data…";
+"nfc.not_available"              = "NFC is not available";
+"nfc.not_supported"              = "NFC is not supported on this device.";
+
+/* Progress messages relayed to the host app via EIDReadDelegate */
+"progress.verifying_can"         = "Verifying CAN…";
+"progress.reading_cardaccess"    = "Reading CardAccess…";
+"progress.pace_auth"             = "PACE authentication…";
+"progress.pace_auth_pcsc"        = "PACE authentication (PC/SC)…";
+"progress.pace_complete"         = "PACE complete";
+"progress.reselect_mrtd"         = "Re-selecting MRTD app…";
+"progress.reading_com"           = "Reading COM…";
+"progress.reading_photo"         = "Reading photo…";
+"progress.reading_signature"     = "Reading signature…";
+"progress.national_app_access"   = "Accessing national application…";
+"progress.security_check"        = "Verifying security…";
+"progress.verifying_pin"         = "Verifying PIN…";
+"progress.personal_data_access"  = "Accessing personal data…";
+"progress.reading_data"          = "Reading data…";
+"progress.csca_validation"       = "CSCA validation…";
+"progress.done"                  = "Done!";
+"progress.selecting_sign_applet" = "Selecting signing applet…";
+"progress.signature_created"     = "Signature created";
+
+/* Errors */
+"error.pin_incorrect"            = "PIN incorrect. Attempts remaining: %d";
+"error.pin_blocked"              = "PIN blocked";
+"error.pin_verify_failed"        = "PIN verification failed";
+"error.no_signing_request"       = "No signing request configured";
+"error.no_card_connection"       = "No card connection available";
+"error.no_tag_reader_after_pace" = "TagReader not available after PACE";
+"error.pace_no_sm"               = "PACE completed but SecureMessaging not initialized";
+"error.no_cardaccess"            = "CardAccess not found and no fallback available";
+"error.no_paceinfo"              = "No PACEInfo found in CardAccess";
+"error.no_reader"                = "TagReader not initialized";
+"error.mrtd_select_failed"       = "Failed to select MRTD application";
+"error.national_select_failed"   = "Failed to select National application";
+"error.data_select_failed"       = "Failed to select Data application";
+"error.mrtd_reselect_sm"         = "Failed to re-select MRTD app with SM: SW=%@";
+
+/* Passport errors */
+"passport.invalid_mrz"           = "Invalid MRZ data. Check the document number, date of birth and date of expiry.";
+"passport.multiple_tags"         = "Multiple NFC tags detected. Remove all tags except the passport.";
+"passport.connection_lost"       = "Connection lost. Keep the passport close to the phone.";
+"passport.invalid_tag"           = "Invalid NFC tag. Use a valid electronic passport.";
+"passport.timeout"               = "Timeout. Try again and hold the passport still.";
+"passport.communication_error"   = "Communication error: %@ (SW=%@)";
+"passport.unknown_error"         = "Unknown error: %@";
+
+/* CSCA validation */
+"csca.validation_error"          = "Validation error: %@";
+"csca.dsc_extraction_error"      = "DSC extraction error: %@";
+"csca.sod_missing"               = "SOD is missing";
+"csca.sod_missing_passport"      = "SOD is missing from the passport";
+"csca.sod_unreadable"            = "SOD could not be read";
+"csca.sod_missing_validation"    = "SOD missing — validation impossible";
+"csca.dsc_missing_in_sod"        = "DSC certificate missing from SOD";
+
+/* OCR */
+"ocr.alert_title"                = "Error";
+"ocr.text_recognition_error"     = "Text recognition error: %@";
+
+/* Smart card */
+"smartcard.communication_error"  = "Card communication error";
+
+/* Data groups */
+"dg.signature"                   = "Signature";
+"dg.com"                         = "Content header";
+"dg.dg1"                         = "Document details";
+"dg.dg2"                         = "Photo";
+"dg.dg3"                         = "Fingerprints";
+"dg.dg4"                         = "Iris";
+"dg.dg5"                         = "Portrait";
+"dg.dg6"                         = "Reserved";
+"dg.dg8"                         = "Characteristic data";
+"dg.dg9"                         = "Structural features";
+"dg.dg10"                        = "Substance features";
+"dg.dg11"                        = "Holder details";
+"dg.dg12"                        = "Document details";
+"dg.dg13"                        = "Optional details";
+"dg.dg14"                        = "Security options";
+"dg.dg15"                        = "Authentication public key";
+"dg.dg16"                        = "Contact persons";
+"dg.sod"                         = "Document Security Object";
+
+/* Finger positions */
+"finger.right_thumb"             = "Right thumb";
+"finger.right_index"             = "Right index";
+"finger.right_middle"            = "Right middle";
+"finger.right_ring"              = "Right ring";
+"finger.right_little"            = "Right little";
+"finger.left_thumb"              = "Left thumb";
+"finger.left_index"              = "Left index";
+"finger.left_middle"             = "Left middle";
+"finger.left_ring"               = "Left ring";
+"finger.left_little"             = "Left little";
+
+/* Status */
+"status.success"                 = "Successful";
+"status.failed"                  = "Failed";
+"status.in_progress"             = "In progress";
+"status.not_started"             = "Not started";
+"status.not_supported"           = "Not supported";
+"status.unknown"                 = "Unknown";
+"status.not_verified"            = "Not verified";
+"status.verified"                = "Verified";
+"status.blocked"                 = "Blocked";
+
+/* MRZ camera UI */
+"mrz.instruction"                = "Scan the passport's MRZ";
+"mrz.alignment_hint"             = "Align the 2 MRZ lines inside the frame";
+"mrz.detected"                   = "MRZ detected! ✓";
+
+/* OCR camera UI */
+"ocr.camera_instruction"         = "Place the ID card inside the frame\nand tap the button";
+"ocr.button_capture"             = "Capture";
+"ocr.button_cancel"              = "Cancel";
+"ocr.camera_unavailable"         = "Camera is not available";
+"ocr.processing_image"           = "Processing image…";
+"ocr.extracting_data"            = "Extracting data from image…";
+"ocr.finalizing"                 = "Finalizing…";
+"ocr.invalid_image"              = "Invalid image";
+"ocr.no_text_found"              = "No text found in image";
+"ocr.request_failed"             = "Request failed: %@";
+
+/* OCR validation issues */
+"validation.missing_document_number" = "Missing document number";
+"validation.missing_name"            = "Missing or incomplete name";
+"validation.missing_cnp"             = "Missing CNP";
+"validation.missing_dates"           = "Missing or invalid dates";
+"validation.missing_address"         = "Missing address";
+"validation.missing_authority"       = "Missing issuing authority";
+"validation.invalid_mrz"             = "Invalid or missing MRZ";
+
+/* Passport text */
+"passport.scan_failed"           = "Scan failed";
+"passport.photo_placeholder"     = "📷 Photo\nPassport";
+"passport.signature_placeholder" = "✍️ Signature\nPassport";
+"passport.label_nationality"     = "🌍 Nationality: %@";
+"passport.label_date_of_birth"   = "🎂 Date of birth: %@";
+"passport.label_name"            = "👤 Name: %@";
+"passport.label_document"        = "📄 Document: %@";
+"passport.label_cnp"             = "🆔 CNP: %@";
+"passport.label_mrz"             = "\n📋 MRZ:\n%@";

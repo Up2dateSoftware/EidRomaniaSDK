@@ -94,7 +94,7 @@ https://github.com/Up2dateSoftware/EidRomaniaSDK.git
 Or add to your `Package.swift`:
 ```swift
 dependencies: [
-    .package(url: "https://github.com/Up2dateSoftware/EidRomaniaSDK.git", exact: "1.5.0")
+    .package(url: "https://github.com/Up2dateSoftware/EidRomaniaSDK.git", exact: "1.5.1")
 ]
 ```
 
@@ -381,7 +381,12 @@ Include in your request:
 
 ## 🔄 Version History
 
-### Version 1.5.0 (Current)
+### Version 1.5.1 (Current)
+- ✅ **Hotfix**: Ship the SwiftPM resource bundle (`RomanianEIDSDK_RomanianEIDSDK.bundle`)
+  inside the xcframework, fixing the runtime crash *Fatal error: unable to
+  find bundle named RomanianEIDSDK_RomanianEIDSDK* on 1.5.0
+
+### Version 1.5.0
 - ✅ **Added**: `EIDReader.shared.signDocument(can:signingPIN:options:delegate:prepareHash:)`
   — single-tap PAdES-style signing with cert-derived hash callback
 - ✅ **Added**: Bundled CEI MAI Sub-CA + Root-CA in the example app — CMS now

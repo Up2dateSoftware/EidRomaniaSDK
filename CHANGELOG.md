@@ -5,6 +5,26 @@ All notable changes to the Romanian eID SDK will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.1] - 2026-06-18
+
+### iOS SDK
+
+#### Fixed
+- **Critical runtime crash on first use** — 1.5.0's xcframework was missing
+  the SwiftPM-generated `RomanianEIDSDK_RomanianEIDSDK.bundle`, so every
+  call that flowed through `L10n.string(...)` (i.e. every reader / signing
+  / progress path) trapped with:
+
+  > Fatal error: unable to find bundle named RomanianEIDSDK_RomanianEIDSDK
+
+  The xcframework build script now backs the bundle out of the archive's
+  `UninstalledProducts/` directory (with a `BuildProductsPath` fallback
+  for older Xcode versions) and drops it next to the binary inside both
+  `.framework` slices, so `Bundle.module` resolves correctly both via
+  SPM `.binaryTarget` and via manual "Embed & Sign" integration.
+
+Drop-in upgrade — no API or source-level changes vs 1.5.0.
+
 ## [1.5.0] - 2026-06-17
 
 ### iOS SDK
