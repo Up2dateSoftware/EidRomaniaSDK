@@ -34,7 +34,7 @@ https://github.com/Up2dateSoftware/EidRomaniaSDK.git
 ```
 
 ```swift
-.package(url: "https://github.com/Up2dateSoftware/EidRomaniaSDK.git", exact: "1.5.1")
+.package(url: "https://github.com/Up2dateSoftware/EidRomaniaSDK.git", exact: "1.6.0")
 ```
 
 ### Manual XCFramework

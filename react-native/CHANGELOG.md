@@ -5,6 +5,14 @@ All notable changes to the Romanian eID SDK for React Native will be documented 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.0] - 2026-06-22
+
+### iOS
+
+- Refreshed bundled `RomanianEIDSDK.xcframework` to the 1.6.0 native build.
+- New commercial license model available — contact `office@up2date.ro`.
+- Drop-in upgrade — existing licenses keep working unchanged.
+
 ## [1.5.1] - 2026-06-18
 
 ### iOS

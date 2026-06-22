@@ -94,7 +94,7 @@ https://github.com/Up2dateSoftware/EidRomaniaSDK.git
 Or add to your `Package.swift`:
 ```swift
 dependencies: [
-    .package(url: "https://github.com/Up2dateSoftware/EidRomaniaSDK.git", exact: "1.5.1")
+    .package(url: "https://github.com/Up2dateSoftware/EidRomaniaSDK.git", exact: "1.6.0")
 ]
 ```
 
@@ -381,7 +381,12 @@ Include in your request:
 
 ## 🔄 Version History
 
-### Version 1.5.1 (Current)
+### Version 1.6.0 (Current)
+- ✅ New commercial license model available. Contact `office@up2date.ro`
+  for details.
+- ✅ Drop-in upgrade — existing licenses keep working unchanged.
+
+### Version 1.5.1
 - ✅ **Hotfix**: Ship the SwiftPM resource bundle (`RomanianEIDSDK_RomanianEIDSDK.bundle`)
   inside the xcframework, fixing the runtime crash *Fatal error: unable to
   find bundle named RomanianEIDSDK_RomanianEIDSDK* on 1.5.0

@@ -963,6 +963,12 @@ final public class EIDLicenseManager {
   final public var licenseInfo: RomanianEIDSDK.LicenseInfo? {
     get
   }
+  final public var licensingModel: Swift.String {
+    get
+  }
+  final public var isUsageBased: Swift.Bool {
+    get
+  }
   final public func initialize(licenseKey: Swift.String) throws
   final public func validateLicense() -> RomanianEIDSDK.LicenseValidationResult
   final public func hasFeature(_ feature: RomanianEIDSDK.LicenseFeature) -> Swift.Bool

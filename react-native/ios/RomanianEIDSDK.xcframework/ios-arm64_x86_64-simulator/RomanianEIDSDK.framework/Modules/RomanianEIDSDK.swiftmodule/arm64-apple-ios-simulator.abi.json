@@ -23239,6 +23239,23 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "RomanianEIDSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RomanianEIDSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -23559,14 +23576,10 @@
             "mangledName": "$s14RomanianEIDSDK17EIDLicenseManagerC7isValidSbvp",
             "moduleName": "RomanianEIDSDK",
             "declAttributes": [
-              "HasInitialValue",
               "Final",
-              "HasStorage",
-              "SetterAccess",
               "AccessControl",
               "RawDocComment"
             ],
-            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -23584,7 +23597,6 @@
                 "usr": "s:14RomanianEIDSDK17EIDLicenseManagerC7isValidSbvg",
                 "mangledName": "$s14RomanianEIDSDK17EIDLicenseManagerC7isValidSbvg",
                 "moduleName": "RomanianEIDSDK",
-                "implicit": true,
                 "declAttributes": [
                   "Final"
                 ],
@@ -23651,6 +23663,101 @@
                 "mangledName": "$s14RomanianEIDSDK17EIDLicenseManagerC11licenseInfoAA07LicenseF0VSgvg",
                 "moduleName": "RomanianEIDSDK",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "licensingModel",
+            "printedName": "licensingModel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14RomanianEIDSDK17EIDLicenseManagerC14licensingModelSSvp",
+            "mangledName": "$s14RomanianEIDSDK17EIDLicenseManagerC14licensingModelSSvp",
+            "moduleName": "RomanianEIDSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14RomanianEIDSDK17EIDLicenseManagerC14licensingModelSSvg",
+                "mangledName": "$s14RomanianEIDSDK17EIDLicenseManagerC14licensingModelSSvg",
+                "moduleName": "RomanianEIDSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isUsageBased",
+            "printedName": "isUsageBased",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14RomanianEIDSDK17EIDLicenseManagerC12isUsageBasedSbvp",
+            "mangledName": "$s14RomanianEIDSDK17EIDLicenseManagerC12isUsageBasedSbvp",
+            "moduleName": "RomanianEIDSDK",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14RomanianEIDSDK17EIDLicenseManagerC12isUsageBasedSbvg",
+                "mangledName": "$s14RomanianEIDSDK17EIDLicenseManagerC12isUsageBasedSbvg",
+                "moduleName": "RomanianEIDSDK",
                 "declAttributes": [
                   "Final"
                 ],
@@ -38051,16 +38158,37 @@
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Security\/JWSValidator.swift",
       "kind": "StringLiteral",
-      "offset": 1573,
-      "length": 394,
-      "value": "\"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA18e0OuJJZbAgorys\/LDNno92av6FuaS5GIgzChXxjRJPU7RbiiJpD6lP5ID4q35g9KrGn54nyaYES7Hy7zGSyGGj1P3WQ5Yfdtd26muj6B6mEB+YkQVkLtuzua7HhnqonSw8\/V0pagdDB\/rlT7HlP2zJ6kMIRNY5IPahB2x8fcy4QUxIsEX3GQmGhlfr9EIexyh8BNp0nGm9J1hUZ\/ZYGP\/R7Pqd\/KpaF92TUWsiza37p5S\/JwRsxJ3cncn3Kjxw05BYDn95\/JN+9+fexQkIAXI622vlZkYKgwl+D7tHcjFhD1eYzXCLwm3OXdm1vjRXQ8ZzwdCXQBc7Vz8xAf8I+QIDAQAB\""
+      "offset": 1821,
+      "length": 17,
+      "value": "\"eid-sdk-prod-v1\""
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Security\/JWSValidator.swift",
+      "kind": "Dictionary",
+      "offset": 2311,
+      "length": 989,
+      "value": "[(\"eid-sdk-prod-v1\", \"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA18e0OuJJZbAgorys\/LDNno92av6FuaS5GIgzChXxjRJPU7RbiiJpD6lP5ID4q35g9KrGn54nyaYES7Hy7zGSyGGj1P3WQ5Yfdtd26muj6B6mEB+YkQVkLtuzua7HhnqonSw8\/V0pagdDB\/rlT7HlP2zJ6kMIRNY5IPahB2x8fcy4QUxIsEX3GQmGhlfr9EIexyh8BNp0nGm9J1hUZ\/ZYGP\/R7Pqd\/KpaF92TUWsiza37p5S\/JwRsxJ3cncn3Kjxw05BYDn95\/JN+9+fexQkIAXI622vlZkYKgwl+D7tHcjFhD1eYzXCLwm3OXdm1vjRXQ8ZzwdCXQBc7Vz8xAf8I+QIDAQAB\"), (\"eid-sdk-prod-v2\", \"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAx8f+IS0CISxQJffmpLqg\/XTD\/zasJAdzBWiJETWaWI4wZzVf1oWdQGiltwqCIADP6lgKp8YiEIrzq+Z4PYnYjzi8WM6\/RTdXM83dCoqNtedOYUZWEqn6vkLCrkUlVky7MhkiKcgyHP4AA9aK+mEayMCJZ4gheFChVfj\/51y6zbSZJ7cUwYCNJWpA+qB6fqvNTBwWyleiKh2AG1xGBrExp9BuX2xKk1xVT6Dkam8qbL5GEZCnJitt93dvqYPqX+EhUWBuWQBK9DXtLI64wEGqBelS\/SDpiSa+8qzK1\/Pa0gZBFCa3F+e61yweXVMMSitYlAR7x21NdOr6SdPIeOOE9wIDAQAB\")]"
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Security\/JWSValidator.swift",
+      "kind": "Dictionary",
+      "offset": 3337,
+      "length": 3,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Security\/JWSValidator.swift",
       "kind": "StringLiteral",
-      "offset": 2058,
-      "length": 49,
-      "value": "\"❌ Invalid embedded public key - SDK corrupted\""
+      "offset": 3468,
+      "length": 58,
+      "value": "\"❌ Invalid embedded public key (\""
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Security\/JWSValidator.swift",
+      "kind": "StringLiteral",
+      "offset": 3508,
+      "length": 1,
+      "value": "\") - SDK corrupted\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Signing\/SigningConfiguration.swift",
@@ -38147,6 +38275,69 @@
       "value": "\"encryption_key\""
     },
     {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Usage\/UsageReporter.swift",
+      "kind": "StringLiteral",
+      "offset": 886,
+      "length": 26,
+      "value": "\"com.up2date.eidsdk.usage\""
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Usage\/UsageReporter.swift",
+      "kind": "Array",
+      "offset": 1072,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Usage\/UsageReporter.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1102,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Usage\/UsageReporter.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1210,
+      "length": 3,
+      "value": "500"
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Usage\/UsageReporter.swift",
+      "kind": "StringLiteral",
+      "offset": 1459,
+      "length": 16,
+      "value": "\"RomanianEIDSDK\""
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Usage\/UsageReporter.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1490,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Usage\/UsageReporter.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1586,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Usage\/UsageReporter.swift",
+      "kind": "StringLiteral",
+      "offset": 1637,
+      "length": 19,
+      "value": "\"usage_buffer.json\""
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Usage\/UsageReporter.swift",
+      "kind": "StringLiteral",
+      "offset": 7500,
+      "length": 29,
+      "value": "\"com.up2date.eidsdk.deviceId\""
+    },
+    {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Internal\/Utils\/ImageParser.swift",
       "kind": "IntegerLiteral",
       "offset": 7622,
@@ -38191,9 +38382,16 @@
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDLicenseManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1023,
+      "offset": 1703,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDLicenseManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2112,
+      "length": 8,
+      "value": "\"device\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/EIDModels.swift",
@@ -38596,15 +38794,8 @@
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/RomanianEIDSDK+Public.swift",
-      "kind": "StringLiteral",
-      "offset": 1666,
-      "length": 7,
-      "value": "\"1.5.1\""
-    },
-    {
-      "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/Public\/RomanianEIDSDK+Public.swift",
       "kind": "Array",
-      "offset": 2465,
+      "offset": 2473,
       "length": 380,
       "value": "[\"A0000002471001\", \"A000000077030C60000000FE00000500\", \"E828BD080FA000000167454441544100\", \"A000000077010800070000FE00000100\"]"
     },
@@ -38613,7 +38804,7 @@
       "kind": "StringLiteral",
       "offset": 1376,
       "length": 7,
-      "value": "\"1.0.0\""
+      "value": "\"1.6.0\""
     },
     {
       "filePath": "\/Users\/xcriss\/Apps\/eidromania-ios-sdk\/RomanianEIDSDK.swift",
