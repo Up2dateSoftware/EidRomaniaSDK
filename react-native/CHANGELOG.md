@@ -5,6 +5,23 @@ All notable changes to the Romanian eID SDK for React Native will be documented 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.1] - 2026-06-22
+
+### Android
+
+- Switched the Android native dependency to the new
+  `com.up2date.eidromania:eidromania-android-sdk:1.0.7` artifact hosted on
+  Google Cloud Artifact Registry (`europe-west1-maven.pkg.dev/eid-romania/eid-romania-sdk`).
+  The repository is now **public read** — no Gradle credentials required.
+- Removed the legacy GitHub Packages Maven repository + `gpr.user` /
+  `gpr.token` credentials from `android/build.gradle`,
+  `example/android/settings.gradle` and `example/android/gradle.properties`.
+- `compileSdk 36`, `minSdk 28` (unchanged).
+- Documentation (`ANDROID_TESTING_GUIDE.md`, `QUICK_TEST_GUIDE.md`,
+  `android/README.md`) refreshed for the new flow.
+
+No iOS changes vs 1.6.0.
+
 ## [1.6.0] - 2026-06-22
 
 ### iOS

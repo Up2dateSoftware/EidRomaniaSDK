@@ -7,14 +7,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        // GitHub Packages repository for eID Romania SDK
-        // Configure credentials in gradle.properties or as environment variables
+        // eID Romania SDK — Google Cloud Artifact Registry (public read).
         maven {
-            url = uri("https://maven.pkg.github.com/Up2DateSoftware/eidromania-android-sdk")
-            credentials {
-                username = project.findProperty("gpr.user") ?: System.getenv("GPR_USER")
-                password = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
-            }
+            url = uri("https://europe-west1-maven.pkg.dev/eid-romania/eid-romania-sdk")
         }
     }
 }

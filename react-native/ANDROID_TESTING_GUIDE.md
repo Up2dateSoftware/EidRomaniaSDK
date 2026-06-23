@@ -65,13 +65,9 @@ Trebuie să conțină repositories pentru SDK:
 ```gradle
 allprojects {
     repositories {
+        // eID Romania SDK — Google Cloud Artifact Registry (public read).
         maven {
-            url = uri("https://maven.pkg.github.com/Up2dateSoftware/eidromania-android-sdk")
-            credentials {
-                // Configure in gradle.properties or environment variables
-                username = project.findProperty("gpr.user") ?: System.getenv("GPR_USER")
-                password = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
-            }
+            url = uri("https://europe-west1-maven.pkg.dev/eid-romania/eid-romania-sdk")
         }
     }
 }

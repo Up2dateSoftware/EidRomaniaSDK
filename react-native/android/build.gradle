@@ -17,14 +17,9 @@ repositories {
   google()
   mavenCentral()
 
-  // GitHub Packages repository for eID Romania SDK
-  // Configure credentials in gradle.properties or as environment variables
+  // eID Romania SDK — Google Cloud Artifact Registry (public read, no credentials).
   maven {
-    url = uri("https://maven.pkg.github.com/Up2DateSoftware/eidromania-android-sdk")
-    credentials {
-      username = project.findProperty("gpr.user") ?: System.getenv("GPR_USER")
-      password = project.findProperty("gpr.token") ?: System.getenv("GPR_TOKEN")
-    }
+    url = uri("https://europe-west1-maven.pkg.dev/eid-romania/eid-romania-sdk")
   }
 }
 
@@ -72,8 +67,8 @@ configurations.all {
 dependencies {
   implementation 'com.facebook.react:react-native:+'
 
-  // eID Romania SDK - Main dependency (updated to v1.5.3)
-  implementation 'com.up2date.eidromania:eidromania-sdk:1.5.3'
+  // eID Romania SDK — Android native, published on Google Artifact Registry.
+  implementation 'com.up2date.eidromania:eidromania-android-sdk:1.0.7'
 
   // Kotlin standard library (required by SDK)
   implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.24'
