@@ -79,7 +79,7 @@ android {
 
     namespace "com.eidtestapp"
     defaultConfig {
-        applicationId "com.eidtestapp"
+        applicationId "com.up2date.EIDSDKExample"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

@@ -435,7 +435,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.eidtestapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.up2date.EIDSDKExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EIDTestApp.app/EIDTestApp";
 			};
@@ -459,7 +459,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.eidtestapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.up2date.EIDSDKExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EIDTestApp.app/EIDTestApp";
 			};
@@ -487,8 +487,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.eidtestapp;
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.up2date.ReactEIDTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.up2date.EIDSDKExample;
 				PRODUCT_NAME = EIDTestApp;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -517,8 +516,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.eidtestapp;
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.up2date.ReactEIDTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.up2date.EIDSDKExample;
 				PRODUCT_NAME = EIDTestApp;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

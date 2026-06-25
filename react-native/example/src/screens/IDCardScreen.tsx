@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -29,6 +29,25 @@ export default function IDCardScreen() {
   const [result, setResult] = useState<any>(null);
   const [readPhoto, setReadPhoto] = useState(true);
   const [readSignature, setReadSignature] = useState(true);
+  const [progress, setProgress] = useState<{
+    percentage: number;
+    message: string;
+  } | null>(null);
+
+  // Subscribe to live reading progress so the UI shows what's happening
+  // (card detected, reading data, photo, signature, percentage).
+  useEffect(() => {
+    const progressSub = EIDReader.onReadProgress((event) => {
+      setProgress({ percentage: event.percentage, message: event.message });
+    });
+    const errorSub = EIDReader.onReadError((event) => {
+      console.error('NFC read error event:', event.code, event.message);
+    });
+    return () => {
+      progressSub.remove();
+      errorSub.remove();
+    };
+  }, []);
 
   const canValid = can.length === 6 && /^\d+$/.test(can);
   const pinValid = pin.length >= 4 && pin.length <= 8 && /^\d+$/.test(pin);
@@ -44,6 +63,7 @@ export default function IDCardScreen() {
     setIsReading(true);
     setError('');
     setResult(null);
+    setProgress(null);
 
     try {
       console.log('📞 Calling EIDReader.readIDCard...');
@@ -71,6 +91,7 @@ export default function IDCardScreen() {
       setError(err.message || 'Failed to read ID card');
       setIsReading(false);
     } finally {
+      setProgress(null);
       console.log('🏁 ID Card read finished');
     }
   };
@@ -195,6 +216,34 @@ export default function IDCardScreen() {
             {isReading ? 'Reading NFC...' : 'Read ID Card'}
           </Text>
         </TouchableOpacity>
+
+        {/* Live reading progress */}
+        {isReading && (
+          <View style={[styles.resultBox, styles.progressBox]}>
+            <View style={styles.resultHeader}>
+              <ActivityIndicator color="#0A84FF" />
+              <Text style={[styles.resultTitle, styles.progressTitle]}>
+                {progress?.message ?? 'Apropie cardul de telefon…'}
+              </Text>
+            </View>
+            <View style={styles.progressBarTrack}>
+              <View
+                style={[
+                  styles.progressBarFill,
+                  {
+                    width: `${Math.max(
+                      progress ? 4 : 0,
+                      Math.min(100, progress?.percentage ?? 0)
+                    )}%`,
+                  },
+                ]}
+              />
+            </View>
+            <Text style={styles.progressPercent}>
+              {progress ? `${Math.round(progress.percentage)}%` : 'Se așteaptă cardul…'}
+            </Text>
+          </View>
+        )}
 
         {/* Error */}
         {error && (
@@ -357,6 +406,32 @@ const styles = StyleSheet.create({
   },
   errorBox: {
     backgroundColor: '#FFEBEE',
+  },
+  progressBox: {
+    backgroundColor: '#EAF4FF',
+  },
+  progressTitle: {
+    color: '#0A84FF',
+    flex: 1,
+  },
+  progressBarTrack: {
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: '#D1E4FB',
+    overflow: 'hidden',
+    marginTop: 4,
+  },
+  progressBarFill: {
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: '#0A84FF',
+  },
+  progressPercent: {
+    fontSize: 13,
+    color: '#0A84FF',
+    fontWeight: '600',
+    textAlign: 'right',
+    marginTop: 6,
   },
   resultHeader: {
     flexDirection: 'row',

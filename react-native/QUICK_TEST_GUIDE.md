@@ -6,7 +6,7 @@ Bridge-ul Android pentru React Native este **100% complet implementat** dar nu p
 
 1. ✅ **Codul este gata** - `RNRomanianEIDSDKModule.java` (459 linii, complet funcțional)
 2. ✅ **Dependencies configurate** - build.gradle cu SDK Maven repository
-3. ✅ **SDK-ul nativ publicat** - `com.up2date.eidromania:eidromania-android-sdk:1.0.7` pe Google Cloud Artifact Registry
+3. ✅ **SDK-ul nativ publicat** - `com.up2date.eidromania:eidromania-android-sdk:1.0.9` pe Google Cloud Artifact Registry
 
 **Gradle caută în:**
 - ✅ Maven Central
@@ -82,7 +82,7 @@ npm run ios
 ```gradle
 dependencies {
   implementation 'com.facebook.react:react-native:+'
-  implementation 'com.up2date.eidromania:eidromania-android-sdk:1.0.7'
+  implementation 'com.up2date.eidromania:eidromania-android-sdk:1.0.9'
   implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.24'
   implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1'
 }

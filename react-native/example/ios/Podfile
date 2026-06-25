@@ -23,8 +23,7 @@ target 'EIDTestApp' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  # Romanian eID SDK - manual until autolinking is fixed
-  pod 'RNRomanianEIDSDK', :path => '../node_modules/@up2date/romanian-eid-sdk/ios'
+  # Romanian eID SDK is now autolinked (podspec ships at package root since 1.6.x)
 
   target 'EIDTestAppTests' do
     inherit! :complete

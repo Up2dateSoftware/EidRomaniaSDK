@@ -68,7 +68,7 @@ dependencies {
   implementation 'com.facebook.react:react-native:+'
 
   // eID Romania SDK — Android native, published on Google Artifact Registry.
-  implementation 'com.up2date.eidromania:eidromania-android-sdk:1.0.7'
+  implementation 'com.up2date.eidromania:eidromania-android-sdk:1.0.9'
 
   // Kotlin standard library (required by SDK)
   implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.24'

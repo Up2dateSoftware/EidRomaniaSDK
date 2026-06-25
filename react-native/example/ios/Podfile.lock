@@ -1576,10 +1576,10 @@ PODS:
     - React-logger (= 0.76.5)
     - React-perflogger (= 0.76.5)
     - React-utils (= 0.76.5)
-  - RNRomanianEIDSDK (1.4.6):
+  - RNRomanianEIDSDK (1.6.1):
     - OpenSSL-Universal (~> 1.1.1)
     - React-Core
-  - RNScreens (4.5.0):
+  - RNScreens (4.2.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1600,9 +1600,9 @@ PODS:
     - ReactCodegen
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
-    - RNScreens/common (= 4.5.0)
+    - RNScreens/common (= 4.2.0)
     - Yoga
-  - RNScreens/common (4.5.0):
+  - RNScreens/common (4.2.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1693,7 +1693,7 @@ DEPENDENCIES:
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCodegen (from `build/generated/ios`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
-  - "RNRomanianEIDSDK (from `../node_modules/@up2date/romanian-eid-sdk/ios`)"
+  - "RNRomanianEIDSDK (from `../node_modules/@up2date/romanian-eid-sdk`)"
   - RNScreens (from `../node_modules/react-native-screens`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -1831,7 +1831,7 @@ EXTERNAL SOURCES:
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
   RNRomanianEIDSDK:
-    :path: "../node_modules/@up2date/romanian-eid-sdk/ios"
+    :path: "../node_modules/@up2date/romanian-eid-sdk"
   RNScreens:
     :path: "../node_modules/react-native-screens"
   Yoga:
@@ -1902,11 +1902,11 @@ SPEC CHECKSUMS:
   React-utils: f584a494ac233c7857bab176416b0c49cb4037ba
   ReactCodegen: 3a68408bf68d0957abcd13d610f76420005c1d91
   ReactCommon: 5809a8ee421b7219221a475b78180f8f34b5c5ec
-  RNRomanianEIDSDK: 276419c9accc23a865072dd24fe9eee13982e987
-  RNScreens: 4c7d5710e955dcf72c14a546e29744f9e591370b
+  RNRomanianEIDSDK: a7cbd593640cd8be92ad8fe530cc0c5094f7c30d
+  RNScreens: 36536f60199b83a4690d54e43a4fb240fd536d06
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: fcc198acd4a55599b3468cfb6ebc526baff5f06e
 
-PODFILE CHECKSUM: 24ab7294515bd28139fd76fe0ef6aaa2374a2066
+PODFILE CHECKSUM: ac3572a9139c946271c72472cd134d7598efd834
 
 COCOAPODS: 1.16.2
